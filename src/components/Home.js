@@ -1,8 +1,7 @@
 import React from "react";
 import "../styles/home.css";
-import image1 from "../img/image1.jpg";
-import image2 from "../img/image2.jpg";
-import image3 from "../img/image3.jpg";
+import Carousel from "./Carousel";
+import carouselData from "./CarouselData";
 
 const Home = () => {
   return (
@@ -16,29 +15,7 @@ const Home = () => {
         mixology skills. Cheers to unforgettable cocktail experiences with
         Cocktail Companion!
       </p>
-      <div className="carousel">
-        <div className="carousel-container">
-          <img
-            className="carousel-image"
-            src={image1}
-            alt="pink gin and tonic"
-          />
-        </div>
-        <div className="carousel-container">
-          <img
-            className="carousel-image"
-            src={image2}
-            alt="passion fruit daiquiri"
-          />
-        </div>
-        <div className="carousel-container">
-          <img
-            className="carousel-image"
-            src={image3}
-            alt="blackberry cocktail"
-          />
-        </div>
-      </div>
+      <Carousel items={carouselData} />
     </div>
   );
 };
