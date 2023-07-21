@@ -1,16 +1,12 @@
 import React from "react";
 import "../styles/cocktail-card.css";
 
-const CocktailCard = ({ drink, setSelectedDrink }) => {
-  const handleSelectDrink = () => {
-    setSelectedDrink(drink);
-  };
-
+const CocktailCard = ({ drink, handleSelectDrink }) => {
   return (
     <button
       type="button"
       className="cocktail-card__button"
-      onClick={handleSelectDrink}
+      onClick={() => handleSelectDrink(drink)}
     >
       <img
         className="cocktail-card__thumbnail"
