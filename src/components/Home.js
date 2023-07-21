@@ -7,13 +7,11 @@ const Home = () => {
   return (
     <div className="home">
       <p className="home__text">
-        Welcome to Cocktail Companion: Your Ultimate Mixology Guide! Explore the
-        art of cocktails with Cocktail Companion, your go-to resource for
-        crafting exceptional drinks. Discover an extensive collection of
-        recipes, delve into the fascinating history behind each libation, and
-        master essential techniques. Join our vibrant community and elevate your
-        mixology skills. Cheers to unforgettable cocktail experiences with
-        Cocktail Companion!
+        Welcome to Cocktail Companion! We have got you covered with an extensive
+        range of delicious drinks, barware to suit all budgets and easy to
+        follow instructions to get you mixing cocktails in no time. Search by
+        ingredient, check out our favourites or let us surprise you with our
+        random cocktail generator!
       </p>
       <Carousel slides={carouselData} />
     </div>
