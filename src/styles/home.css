@@ -2,9 +2,9 @@
   display: flex;
 }
 
-.text {
-  width: 30%;
-  margin: 2rem;
-  font-size: 1.5rem;
+.home__text {
+  width: 45%;
+  margin: 1.5rem 0.75rem 1.5rem auto;
+  font-size: 2.2rem;
 }
 

@@ -1,45 +1,51 @@
 import { React, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import carouselData from "./CarouselData";
 import "../styles/carousel.css";
 
-const Carousel = ({ items }) => {
+const Carousel = ({ slides }) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const length = { items };
+  const slideLength = slides.length;
 
-  const nextImage = () => {
-    setCurrentImage(currentImage === length - 1 ? 0 : currentImage + 1);
+  const nextSlide = () => {
+    setCurrentImage(currentImage === slideLength - 1 ? 0 : currentImage + 1);
   };
 
-  const previousImage = () => {
-    setCurrentImage(currentImage === 0 ? length - 1 : currentImage - 1);
+  const previousSlide = () => {
+    setCurrentImage(currentImage === 0 ? slideLength - 1 : currentImage - 1);
   };
 
-  if (!length) {
+  if (!slideLength) {
     return null;
   }
 
   return (
     <div className="carousel">
       <FontAwesomeIcon
-        className="left-arrow"
+        className="carousel__left-arrow"
         icon={faArrowLeft}
-        onClick={previousImage}
+        onClick={previousSlide}
       />
       <FontAwesomeIcon
-        className="right-arrow"
+        className="carousel__right-arrow"
         icon={faArrowRight}
-        onClick={nextImage}
+        onClick={nextSlide}
       />
-      {carouselData.map((item, index) => {
+      {slides.map((slide, index) => {
         return (
           <div
-            className={index === currentImage ? "image-active" : "image"}
-            key={item.alt}
+            className={index === currentImage ? "slide active" : "slide"}
+            key={slide.alt}
           >
             {index === currentImage && (
-              <img src={item.image} alt={item.alt} className="image" />
+              <div>
+                <img
+                  src={slide.image}
+                  alt={slide.alt}
+                  className="carousel__image"
+                />
+                <p className="carousel__title">{slide.title}</p>
+              </div>
             )}
           </div>
         );

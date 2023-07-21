@@ -6,7 +6,7 @@ import carouselData from "./CarouselData";
 const Home = () => {
   return (
     <div className="home">
-      <p className="text">
+      <p className="home__text">
         Welcome to Cocktail Companion: Your Ultimate Mixology Guide! Explore the
         art of cocktails with Cocktail Companion, your go-to resource for
         crafting exceptional drinks. Discover an extensive collection of
@@ -15,7 +15,7 @@ const Home = () => {
         mixology skills. Cheers to unforgettable cocktail experiences with
         Cocktail Companion!
       </p>
-      <Carousel items={carouselData} />
+      <Carousel slides={carouselData} />
     </div>
   );
 };
