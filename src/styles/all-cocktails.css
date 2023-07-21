@@ -1,7 +1,7 @@
 .all-cocktails__grid {
     display: grid;
     background-color: #CEFFAD;
-    max-width: 60%;
+    max-width: 70%;
     padding: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
