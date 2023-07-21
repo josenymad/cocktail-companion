@@ -7,9 +7,11 @@ const AllCocktails = ({ drinksData }) => {
 
   return (
     <div className="all-cocktails">
-      {drinks.map((drink) => {
-        return <CocktailCard drink={drink} />;
-      })}
+      <div className="all-cocktails__grid">
+        {drinks.map((drink) => {
+          return <CocktailCard drink={drink} />;
+        })}
+      </div>
     </div>
   );
 };

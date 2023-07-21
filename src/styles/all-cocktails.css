@@ -1,0 +1,9 @@
+.all-cocktails__grid {
+    display: grid;
+    background-color: #CEFFAD;
+    max-width: 60%;
+    padding: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    margin-right: 3em;
+}
