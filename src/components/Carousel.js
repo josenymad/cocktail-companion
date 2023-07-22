@@ -35,7 +35,7 @@ const Carousel = ({ slides }) => {
         return (
           <div
             className={index === currentImage ? "slide active" : "slide"}
-            key={slide.alt}
+            key={slide.id}
           >
             {index === currentImage && (
               <div>
@@ -43,6 +43,7 @@ const Carousel = ({ slides }) => {
                   src={slide.image}
                   alt={slide.alt}
                   className="carousel__image"
+                  data-testid="current__image"
                 />
                 <p className="carousel__title">{slide.title}</p>
               </div>
