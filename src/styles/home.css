@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+}
+
+.home__text {
+  width: 45%;
+  margin: 1.5rem 0.75rem 1.5rem auto;
+  font-size: 2.7rem;
+}
+

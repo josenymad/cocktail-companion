@@ -1,0 +1,62 @@
+.Post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    padding-top: 0rem;
+    padding-bottom: 10rem;
+    background-color: #FDD1C4;
+    position: relative; 
+  }
+  
+  .Post-text {
+    padding-top: 3rem;
+  }
+  
+  .Post-list {
+    display: flex;
+    flex-direction: column;
+    list-style-position: outside;
+    align-items: flex-start;
+    list-style: none;
+  }
+  
+  .cocktailImage {
+    float: left;
+    max-height: 30rem;
+    margin-right: 3rem;
+  }
+  
+  .cocktailImageAlt {
+    float: right;
+    max-height: 30rem;
+    margin-left: 3rem;
+  }
+  
+  .Post-navigation {
+    position: absolute; 
+    bottom: 25rem;
+    display: flex;
+    justify-content: space-between;
+    width: 70%; 
+  }
+  
+  .Button-prev,
+  .Button-next {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: #FCACAC;
+    color: black;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Disable the button when it's not clickable */
+  .Button-prev[disabled],
+  .Button-next[disabled] {
+    background-color: #dddddd;
+    cursor: not-allowed;
+  }
+  
