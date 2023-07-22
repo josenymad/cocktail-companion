@@ -35,12 +35,14 @@ const CocktailDetails = ({ selectedDrink, handleSelectDrink }) => {
             </li>
           ))}
         </ul>
-        <p className="cocktail-details__instructions">Instructions:</p>
+        <p className="cocktail-details__instruction">Instructions:</p>
         <p className="cocktail-details__instructions">
           {selectedDrink.strInstructions}
         </p>
         {selectedDrink.strVideo ? (
-          <a href={selectedDrink.strVideo}>Video</a>
+          <a href={selectedDrink.strVideo} target="_blank" rel="noreferrer">
+            Video
+          </a>
         ) : null}
       </div>
       <button

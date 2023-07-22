@@ -3,5 +3,7 @@
     text-decoration: none;
     display: flex;
     justify-content: space-around;
-    margin: 3em;
+    margin: 2em;
+    background-color: #FFE0E4;
+    padding: 1em;
 }
