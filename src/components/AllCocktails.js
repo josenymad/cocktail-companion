@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/all-cocktails.css";
 import CocktailCard from "./CocktailCard";
 import CocktailDetails from "./CocktailDetails";
+import CocktailFilter from "./CocktailFilter";
 
 const AllCocktails = ({ drinksData, selectedDrink, setSelectedDrink }) => {
   const { drinks } = drinksData;
@@ -11,6 +12,7 @@ const AllCocktails = ({ drinksData, selectedDrink, setSelectedDrink }) => {
 
   return (
     <div className="all-cocktails">
+      <CocktailFilter />
       <div className="all-cocktails__grid">
         {drinks.map((drink) => {
           return (
