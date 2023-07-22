@@ -1,0 +1,25 @@
+.cocktail-details {
+    position: fixed;
+    background-color: #FCACAC;
+    top: 5%;
+    left: 33%;
+    padding: 1em;
+    border-style: solid;
+}
+
+.cocktail-details__image {
+    height: 369px;
+    width: auto;
+}
+
+.cocktail-details__text {
+    display: inline-block;
+    text-align: left;
+    margin: 1em;
+    max-width: 369px;
+}
+
+.cocktail-details__button {
+    display: block;
+    margin: auto;
+}

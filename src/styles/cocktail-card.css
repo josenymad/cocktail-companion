@@ -1,0 +1,9 @@
+.cocktail-card__button {
+    margin: 1em;
+    padding: 1em;
+}
+
+.cocktail-card__thumbnail {
+    width: 250px;
+    height: auto;
+}
