@@ -17,8 +17,6 @@ const CocktailDetails = ({ selectedDrink, handleSelectDrink }) => {
     return measure;
   };
 
-  console.log(ingredients, measures);
-
   return (
     <div className="cocktail-details">
       <img
