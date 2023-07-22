@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "../styles/App.css";
 import NavBar from "./NavBar";
+import Home from "./Home";
 
 const App = () => {
   return (

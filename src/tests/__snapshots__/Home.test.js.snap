@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="home"
+  >
+    <p
+      class="home__text"
+    >
+      Welcome to Cocktail Companion! We have got you covered with an extensive range of delicious drinks, barware to suit all budgets and easy to follow instructions to get you mixing cocktails in no time. Search by ingredient, check out our favourites or let us surprise you with our random cocktail generator!
+    </p>
+    <div
+      class="carousel"
+    >
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-arrow-left carousel__left-arrow"
+        data-icon="arrow-left"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+          fill="currentColor"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-arrow-right carousel__right-arrow"
+        data-icon="arrow-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+          fill="currentColor"
+        />
+      </svg>
+      <div
+        class="slide active"
+      >
+        <div>
+          <img
+            alt="pink fizzy drink in short glass garnished with a slice of lemon"
+            class="carousel__image"
+            data-testid="current__image"
+            src="https://images.unsplash.com/photo-1583898350903-99fa829dad3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvY2t0YWlsfGVufDB8fDB8fHww&auto=format&fit=crop&w=1400&q=60"
+          />
+          <p
+            class="carousel__title"
+          >
+            Pink Gin and Tonic
+          </p>
+        </div>
+      </div>
+      <div
+        class="slide"
+      />
+      <div
+        class="slide"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
