@@ -14,16 +14,20 @@ const AllCocktails = ({ drinksData, selectedDrink, setSelectedDrink }) => {
     <div className="all-cocktails">
       <CocktailFilter />
       <div className="all-cocktails__grid">
-        {drinks.map((drink) => {
-          return (
-            <div key={drink.strDrink} className="cocktail-card">
-              <CocktailCard
-                drink={drink}
-                handleSelectDrink={handleSelectDrink}
-              />
-            </div>
-          );
-        })}
+        {drinks ? (
+          drinks.map((drink) => {
+            return (
+              <div key={drink.strDrink} className="cocktail-card">
+                <CocktailCard
+                  drink={drink}
+                  handleSelectDrink={handleSelectDrink}
+                />
+              </div>
+            );
+          })
+        ) : (
+          <p className="all-cocktails__loading">Loading</p>
+        )}
       </div>
       {Object.keys(selectedDrink).length ? (
         <CocktailDetails

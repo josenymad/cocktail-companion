@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "../styles/app.css";
 import NavBar from "./NavBar";
 import AllCocktails from "./AllCocktails";
 import BestBarware from "./Barware";
 import Home from "./Home";
+import getAllCocktails from "../requests/getAllCocktails";
 
-const App = ({ drinksData }) => {
+const App = () => {
   const [selectedDrink, setSelectedDrink] = useState({});
+  const [drinksData, setDrinksData] = useState({});
+
+  useEffect(() => {
+    getAllCocktails(setDrinksData);
+  }, []);
 
   return (
     <div className="app">
