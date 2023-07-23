@@ -11,6 +11,7 @@ const App = () => {
   const [selectedDrink, setSelectedDrink] = useState({});
   const [drinksData, setDrinksData] = useState({});
   const [searchQuery, setSearchQuery] = useState("");
+  const spirits = ["Rum", "Vodka", "Gin", "Whiskey", "Tequila", "Brandy"];
 
   useEffect(() => {
     getCocktails(setDrinksData);
@@ -23,6 +24,10 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     getCocktails(setDrinksData, searchQuery);
+  };
+
+  const filterDrinks = (event) => {
+    console.log(event.target.value);
   };
 
   return (
@@ -43,6 +48,8 @@ const App = () => {
               selectedDrink={selectedDrink}
               setSelectedDrink={setSelectedDrink}
               searchQuery={searchQuery}
+              filterDrinks={filterDrinks}
+              spirits={spirits}
             />
           }
         />

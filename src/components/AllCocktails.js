@@ -9,6 +9,8 @@ const AllCocktails = ({
   selectedDrink,
   setSelectedDrink,
   searchQuery,
+  filterDrinks,
+  spirits,
 }) => {
   const { drinks } = drinksData;
   const handleSelectDrink = (selection) => {
@@ -17,7 +19,7 @@ const AllCocktails = ({
 
   return (
     <div className="all-cocktails">
-      <CocktailFilter />
+      <CocktailFilter spirits={spirits} filterDrinks={filterDrinks} />
       <div className="all-cocktails__grid">
         {drinks ? (
           drinks.map((drink) => {
