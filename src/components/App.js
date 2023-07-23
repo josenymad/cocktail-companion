@@ -5,19 +5,33 @@ import NavBar from "./NavBar";
 import AllCocktails from "./AllCocktails";
 import BestBarware from "./Barware";
 import Home from "./Home";
-import getAllCocktails from "../requests/getAllCocktails";
+import getCocktails from "../requests/getCocktails";
 
 const App = () => {
   const [selectedDrink, setSelectedDrink] = useState({});
   const [drinksData, setDrinksData] = useState({});
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    getAllCocktails(setDrinksData);
-  }, []);
+    getCocktails(setDrinksData);
+  }, [searchQuery]);
+
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    getCocktails(setDrinksData, searchQuery);
+  };
 
   return (
     <div className="app">
-      <NavBar />
+      <NavBar
+        searchQuery={searchQuery}
+        handleInputChange={handleInputChange}
+        handleSubmit={handleSubmit}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="best-barware" element={<BestBarware />} />
@@ -28,6 +42,7 @@ const App = () => {
               drinksData={drinksData}
               selectedDrink={selectedDrink}
               setSelectedDrink={setSelectedDrink}
+              searchQuery={searchQuery}
             />
           }
         />

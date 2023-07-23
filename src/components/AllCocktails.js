@@ -4,7 +4,12 @@ import CocktailCard from "./CocktailCard";
 import CocktailDetails from "./CocktailDetails";
 import CocktailFilter from "./CocktailFilter";
 
-const AllCocktails = ({ drinksData, selectedDrink, setSelectedDrink }) => {
+const AllCocktails = ({
+  drinksData,
+  selectedDrink,
+  setSelectedDrink,
+  searchQuery,
+}) => {
   const { drinks } = drinksData;
   const handleSelectDrink = (selection) => {
     setSelectedDrink(selection);
@@ -26,7 +31,7 @@ const AllCocktails = ({ drinksData, selectedDrink, setSelectedDrink }) => {
             );
           })
         ) : (
-          <p className="all-cocktails__loading">Loading</p>
+          <p className="no-cocktails">{`Sorry, there doesn't seem to be any cocktails called ${searchQuery}`}</p>
         )}
       </div>
       {Object.keys(selectedDrink).length ? (
