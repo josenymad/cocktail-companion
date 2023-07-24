@@ -33,7 +33,7 @@ const App = () => {
         handleSubmit={handleSubmit}
       />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home drinksData={drinksData} />} />
         <Route path="best-barware" element={<BestBarware />} />
         <Route
           path="all-cocktails"

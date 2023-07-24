@@ -5,6 +5,7 @@ import "../styles/carousel.css";
 
 const Carousel = ({ slides }) => {
   const [currentImage, setCurrentImage] = useState(0);
+
   const slideLength = slides.length;
 
   const nextSlide = () => {
@@ -35,17 +36,17 @@ const Carousel = ({ slides }) => {
         return (
           <div
             className={index === currentImage ? "slide active" : "slide"}
-            key={slide.id}
+            key={slide.idDrink}
           >
             {index === currentImage && (
               <div>
                 <img
-                  src={slide.image}
-                  alt={slide.alt}
+                  src={slide.strDrinkThumb}
+                  alt="cocktail"
                   className="carousel__image"
                   data-testid="current__image"
                 />
-                <p className="carousel__title">{slide.title}</p>
+                <p className="carousel__title">{slide.strDrink}</p>
               </div>
             )}
           </div>
