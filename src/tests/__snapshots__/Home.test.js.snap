@@ -48,24 +48,15 @@ exports[`Home renders correctly 1`] = `
       >
         <div>
           <img
-            alt="pink fizzy drink in short glass garnished with a slice of lemon"
+            alt="cocktail"
             class="carousel__image"
             data-testid="current__image"
-            src="https://images.unsplash.com/photo-1583898350903-99fa829dad3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvY2t0YWlsfGVufDB8fDB8fHww&auto=format&fit=crop&w=1400&q=60"
           />
           <p
             class="carousel__title"
-          >
-            Pink Gin and Tonic
-          </p>
+          />
         </div>
       </div>
-      <div
-        class="slide"
-      />
-      <div
-        class="slide"
-      />
     </div>
   </div>
 </DocumentFragment>
