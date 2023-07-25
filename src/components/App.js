@@ -41,6 +41,7 @@ const App = () => {
             <AllCocktails
               drinksData={drinksData}
               selectedDrink={selectedDrink}
+              setDrinksData={setDrinksData}
               setSelectedDrink={setSelectedDrink}
               searchQuery={searchQuery}
             />
