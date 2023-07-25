@@ -16,7 +16,7 @@ const Carousel = ({ slides }) => {
     setCurrentImage(currentImage === 0 ? slideLength - 1 : currentImage - 1);
   };
 
-  if (!slideLength) {
+  if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
 
