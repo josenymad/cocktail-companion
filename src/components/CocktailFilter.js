@@ -1,10 +1,14 @@
 import React from "react";
 import "../styles/cocktail-filter.css";
 import getRandomSelection from "../requests/getRandomSelection";
+import getRandomDrink from "../requests/getRandomDrink";
 
 const CocktailFilter = ({ setDrinksData }) => {
   const handleRandomSelection = () => {
     getRandomSelection(setDrinksData);
+  };
+  const handleRandomDrink = () => {
+    getRandomDrink(setDrinksData);
   };
 
   return (
@@ -13,6 +17,9 @@ const CocktailFilter = ({ setDrinksData }) => {
       <h3 className="cocktail-filter__random ">Random</h3>
       <button type="button" onClick={handleRandomSelection}>
         Selection
+      </button>
+      <button type="button" onClick={handleRandomDrink}>
+        Drink
       </button>
     </div>
   );
