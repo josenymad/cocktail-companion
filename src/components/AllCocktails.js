@@ -7,6 +7,7 @@ import CocktailFilter from "./CocktailFilter";
 const AllCocktails = ({
   drinksData,
   selectedDrink,
+  setDrinksData,
   setSelectedDrink,
   searchQuery,
 }) => {
@@ -17,7 +18,7 @@ const AllCocktails = ({
 
   return (
     <div className="all-cocktails">
-      <CocktailFilter />
+      <CocktailFilter setDrinksData={setDrinksData} />
       <div className="all-cocktails__grid">
         {drinks ? (
           drinks.map((drink) => {
