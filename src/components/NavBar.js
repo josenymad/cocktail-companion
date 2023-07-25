@@ -22,9 +22,10 @@ const NavBar = ({ searchQuery, handleInputChange, handleSubmit }) => {
           <Link to="all-cocktails">All Cocktails</Link>
         </li>
         <li className="navbar-list__item">
-          <form onSubmit={handleSubmit}>
+          <form className="navbar-list__search" onSubmit={handleSubmit}>
             <label htmlFor="search">{}</label>
             <input
+              className="navbar-list__searchBoxText"
               type="search"
               id="search"
               value={searchQuery}

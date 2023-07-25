@@ -7,3 +7,29 @@
     background-color: #FFE0E4;
     padding: 1em;
 }
+
+@media screen and (max-width: 800px) {
+    .navbar-titles {
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-list__item {
+        flex-direction: row;
+        font-size: 1rem;
+    }
+
+    input {
+        width: 75%;
+    }
+
+    .navbar-list__searchBoxText {
+        color: blue;
+    }
+}

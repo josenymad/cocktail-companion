@@ -8,3 +8,17 @@
   font-size: 2.7rem;
 }
 
+@media screen and (max-width: 800px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home__text {
+    font-size: 1.5rem;
+    width: 95%;
+    padding-left: 5%;
+  }
+}
+

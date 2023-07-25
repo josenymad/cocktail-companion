@@ -31,3 +31,10 @@
   height: 30rem;
   border-radius: 10px;
 }
+
+@media screen and (max-width: 800px) {
+  .carousel {
+    align-items:center;
+    width: 100%;  
+  }
+}
