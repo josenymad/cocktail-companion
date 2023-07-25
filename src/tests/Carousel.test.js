@@ -4,20 +4,28 @@ import Carousel from "../components/Carousel";
 
 describe("Carousel", () => {
   const validProps = {
-    mockImages: [
-      { "image-url": "mock-url1", id: "1" },
-      { "image-url": "mock-url2", id: "2" },
+    drinks: [
+      {
+        idDrink: "1",
+        image: "mock-url1",
+        title: "mock-title",
+      },
+      {
+        idDrink: "2",
+        image: "mock-url2",
+        title: "mock-title",
+      },
     ],
   };
 
   it("renders correctly", () => {
-    const { asFragment } = render(<Carousel slides={validProps.mockImages} />);
+    const { asFragment } = render(<Carousel slides={validProps.drinks} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders the correct image", () => {
-    render(<Carousel slides={validProps.mockImages} />);
+    render(<Carousel slides={validProps.drinks} />);
 
     expect(screen.getByTestId("current__image")).toBeInTheDocument();
   });
