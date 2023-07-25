@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/cocktail-filter.css";
 import getRandomSelection from "../requests/getRandomSelection";
 import getRandomDrink from "../requests/getRandomDrink";
+import getMostPopular from "../requests/getMostPopular";
 
 const CocktailFilter = ({ setDrinksData }) => {
   const handleRandomSelection = () => {
@@ -9,6 +10,9 @@ const CocktailFilter = ({ setDrinksData }) => {
   };
   const handleRandomDrink = () => {
     getRandomDrink(setDrinksData);
+  };
+  const handleMostPopular = () => {
+    getMostPopular(setDrinksData);
   };
 
   return (
@@ -20,6 +24,10 @@ const CocktailFilter = ({ setDrinksData }) => {
       </button>
       <button type="button" onClick={handleRandomDrink}>
         Drink
+      </button>
+      <h3>Most Popular</h3>
+      <button type="button" onClick={handleMostPopular}>
+        Search
       </button>
     </div>
   );
