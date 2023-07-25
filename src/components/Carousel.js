@@ -6,7 +6,11 @@ import "../styles/carousel.css";
 const Carousel = ({ slides }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  const slideLength = slides.length;
+  let slideLength = 0;
+
+  if (slides !== null && slides !== undefined) {
+    slideLength = slides.length;
+  }
 
   const nextSlide = () => {
     setCurrentImage(currentImage === slideLength - 1 ? 0 : currentImage + 1);

@@ -13,7 +13,10 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    getCocktails(setDrinksData);
+    async function fetchData() {
+      await getCocktails(setDrinksData);
+    }
+    fetchData();
   }, [searchQuery]);
 
   const handleInputChange = (event) => {
