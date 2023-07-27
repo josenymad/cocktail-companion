@@ -6,11 +6,13 @@ import AllCocktails from "./AllCocktails";
 import BestBarware from "./Barware";
 import Home from "./Home";
 import getCocktails from "../requests/getCocktails";
+import filterCocktails from "../requests/filterCocktails";
 
 const App = () => {
   const [selectedDrink, setSelectedDrink] = useState({});
   const [drinksData, setDrinksData] = useState({});
   const [searchQuery, setSearchQuery] = useState("");
+  const [filteredDrinks, setFilteredDrinks] = useState([]);
   const spirits = ["Rum", "Vodka", "Gin", "Whiskey", "Tequila", "Brandy"];
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const App = () => {
   };
 
   const filterDrinks = (event) => {
-    console.log(event.target.value);
+    filterCocktails(event.target.value, setFilteredDrinks);
   };
 
   return (
@@ -50,6 +52,7 @@ const App = () => {
               searchQuery={searchQuery}
               filterDrinks={filterDrinks}
               spirits={spirits}
+              filteredDrinks={filteredDrinks}
             />
           }
         />

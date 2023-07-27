@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/all-cocktails.css";
 import CocktailCard from "./CocktailCard";
 import CocktailDetails from "./CocktailDetails";
@@ -11,11 +11,24 @@ const AllCocktails = ({
   searchQuery,
   filterDrinks,
   spirits,
+  filteredDrinks,
 }) => {
+  const [completeFilteredData, setCompleteFilteredData] = useState([]);
   const { drinks } = drinksData;
   const handleSelectDrink = (selection) => {
     setSelectedDrink(selection);
   };
+
+  useEffect(() => {
+    if (drinks !== null && drinks !== undefined) {
+      const filteredCocktails = drinks.filter((drink) => {
+        return filteredDrinks.some((filteredDrink) => {
+          return filteredDrink.idDrink === drink.idDrink;
+        });
+      });
+      setCompleteFilteredData(filteredCocktails);
+    }
+  }, [filteredDrinks]);
 
   return (
     <div className="all-cocktails">
@@ -23,6 +36,20 @@ const AllCocktails = ({
       <div className="all-cocktails__grid">
         {drinks ? (
           drinks.map((drink) => {
+            return (
+              <div key={drink.strDrink} className="cocktail-card">
+                <CocktailCard
+                  drink={drink}
+                  handleSelectDrink={handleSelectDrink}
+                />
+              </div>
+            );
+          })
+        ) : (
+          <p className="no-cocktails">{`Sorry, there doesn't seem to be any cocktails called ${searchQuery}`}</p>
+        )}
+        {completeFilteredData.length ? (
+          completeFilteredData.map((drink) => {
             return (
               <div key={drink.strDrink} className="cocktail-card">
                 <CocktailCard
