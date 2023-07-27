@@ -32,6 +32,11 @@ const App = () => {
     filterCocktails(event.target.value, setFilteredDrinks);
   };
 
+  const clearFilter = () => {
+    setSearchQuery("");
+    setFilteredDrinks([]);
+  };
+
   return (
     <div className="app">
       <NavBar
@@ -53,6 +58,7 @@ const App = () => {
               filterDrinks={filterDrinks}
               spirits={spirits}
               filteredDrinks={filteredDrinks}
+              clearFilter={clearFilter}
             />
           }
         />

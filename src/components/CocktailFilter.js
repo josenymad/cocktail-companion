@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/cocktail-filter.css";
 
-const CocktailFilter = ({ spirits, filterDrinks }) => {
+const CocktailFilter = ({ spirits, filterDrinks, clearFilter }) => {
   return (
     <div className="cocktail-filter">
       <h3 className="cocktail-filter__spirits-header">Find by Spirit</h3>
@@ -19,6 +19,13 @@ const CocktailFilter = ({ spirits, filterDrinks }) => {
           </div>
         );
       })}
+      <button
+        type="button"
+        className="cocktail-filter__clear-filter"
+        onClick={clearFilter}
+      >
+        Clear search and filter
+      </button>
     </div>
   );
 };

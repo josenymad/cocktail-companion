@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from "react";
 import "../styles/all-cocktails.css";
 import CocktailCard from "./CocktailCard";
@@ -12,6 +13,7 @@ const AllCocktails = ({
   filterDrinks,
   spirits,
   filteredDrinks,
+  clearFilter,
 }) => {
   const [completeFilteredData, setCompleteFilteredData] = useState([]);
   const { drinks } = drinksData;
@@ -32,36 +34,43 @@ const AllCocktails = ({
 
   return (
     <div className="all-cocktails">
-      <CocktailFilter spirits={spirits} filterDrinks={filterDrinks} />
+      <CocktailFilter
+        spirits={spirits}
+        filterDrinks={filterDrinks}
+        clearFilter={clearFilter}
+      />
       <div className="all-cocktails__grid">
-        {drinks ? (
-          drinks.map((drink) => {
-            return (
-              <div key={drink.strDrink} className="cocktail-card">
-                <CocktailCard
-                  drink={drink}
-                  handleSelectDrink={handleSelectDrink}
-                />
-              </div>
-            );
-          })
-        ) : (
-          <p className="no-cocktails">{`Sorry, there doesn't seem to be any cocktails called ${searchQuery}`}</p>
-        )}
-        {completeFilteredData.length ? (
-          completeFilteredData.map((drink) => {
-            return (
-              <div key={drink.strDrink} className="cocktail-card">
-                <CocktailCard
-                  drink={drink}
-                  handleSelectDrink={handleSelectDrink}
-                />
-              </div>
-            );
-          })
-        ) : (
-          <p className="no-cocktails">{`Sorry, there doesn't seem to be any cocktails called ${searchQuery}`}</p>
-        )}
+        {
+          /* has the user filtered by drinks */ completeFilteredData.length ? (
+            completeFilteredData.map((drink) => {
+              return (
+                <div key={drink.strDrink} className="cocktail-card">
+                  <CocktailCard
+                    drink={drink}
+                    handleSelectDrink={handleSelectDrink}
+                  />
+                </div>
+              );
+            })
+          ) : /* has the drinks data loaded */ drinks ? (
+            drinks.map((drink) => {
+              return (
+                <div key={drink.strDrink} className="cocktail-card">
+                  <CocktailCard
+                    drink={drink}
+                    handleSelectDrink={handleSelectDrink}
+                  />
+                </div>
+              );
+            })
+          ) : /* has the user entered a search query */ searchQuery ? (
+            <p className="no-cocktails">{`Sorry, there doesn't seem to be any cocktails called ${searchQuery}`}</p>
+          ) : (
+            <p className="cocktails-loading">
+              Hang on, your cocktails are loading!
+            </p>
+          )
+        }
       </div>
       {Object.keys(selectedDrink).length ? (
         <CocktailDetails
