@@ -40,6 +40,7 @@ exports[`Carousel renders correctly 1`] = `
     >
       <div>
         <img
+          alt="cocktail"
           class="carousel__image"
           data-testid="current__image"
         />
