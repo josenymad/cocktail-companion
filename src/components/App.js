@@ -38,6 +38,7 @@ const App = () => {
   const clearFilter = () => {
     setSearchQuery("");
     setFilteredDrinks([]);
+    getCocktails(setDrinksData);
   };
 
   return (
