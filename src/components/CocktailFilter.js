@@ -26,37 +26,6 @@ const CocktailFilter = ({
 
   return (
     <div className="cocktail-filter">
-      <h3 className="cocktail-filter__spirits-header">Find by Spirit</h3>
-      {spirits.map((spirit) => {
-        return (
-          <div className="cocktail-filter__spirit" key={spirit}>
-            <button
-              type="button"
-              className="cocktail-filter__spirit-button"
-              value={spirit}
-              onClick={filterDrinks}
-            >
-              {spirit}
-            </button>
-          </div>
-        );
-      })}
-      <h3 className="cocktail-filter__spirit">Filter by Spirit</h3>
-      <h3 className="cocktail-filter__random ">Random</h3>
-      <button type="button" onClick={handleRandomSelection}>
-        Selection
-      </button>
-      <button type="button" onClick={handleRandomDrink}>
-        Drink
-      </button>
-      <h3 className="cocktail-filter__popular">Most Popular</h3>
-      <button type="button" onClick={handleMostPopular}>
-        Search
-      </button>
-      <h3 className="cocktail-filter__non-alcoholic">Non-Alcoholic</h3>
-      <button type="button" onClick={handleNonAlcoholic}>
-        Search
-      </button>
       <button
         type="button"
         className="cocktail-filter__clear-filter"
@@ -64,6 +33,67 @@ const CocktailFilter = ({
       >
         Clear search and filter
       </button>
+      <h3 className="cocktail-filter__spirits-header">Filter by Spirit</h3>
+      <div className="cocktail-filter__spirits">
+        {spirits.map((spirit) => {
+          return (
+            <div className="cocktail-filter__spirit" key={spirit}>
+              <button
+                type="button"
+                className="cocktail-filter__spirit-button"
+                value={spirit}
+                onClick={filterDrinks}
+              >
+                {spirit}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+      <div className="cocktail-filter__filters">
+        <div className="cocktail-filter__random-selection">
+          <button
+            type="button"
+            onClick={handleRandomSelection}
+            className="cocktail-filter__random-selection-button"
+          >
+            <h4 className="cocktail-filter__random-selection-header">
+              Random Selection
+            </h4>
+          </button>
+        </div>
+        <div className="cocktail-filter__random-drink">
+          <button
+            type="button"
+            onClick={handleRandomDrink}
+            className="cocktail-filter__random-drink-button"
+          >
+            <h4 className="cocktail-filter__random-drink-header">
+              Random Drink
+            </h4>
+          </button>
+        </div>
+        <div className="cocktail-filter__popular">
+          <button
+            type="button"
+            onClick={handleMostPopular}
+            className="cocktail-filter__popular-button"
+          >
+            <h4 className="cocktail-filter__popular-header">Most Popular</h4>
+          </button>
+        </div>
+        <div className="cocktail-filter__non-alcoholic">
+          <button
+            type="button"
+            onClick={handleNonAlcoholic}
+            className="cocktail-filter__non-alcoholic-button"
+          >
+            <h4 className="cocktail-filter__non-alcoholic-header">
+              Non-Alcoholic
+            </h4>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
