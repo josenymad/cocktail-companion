@@ -8,6 +8,7 @@ import CocktailFilter from "./CocktailFilter";
 const AllCocktails = ({
   drinksData,
   selectedDrink,
+  setDrinksData,
   setSelectedDrink,
   searchQuery,
   filterDrinks,
@@ -38,6 +39,7 @@ const AllCocktails = ({
         spirits={spirits}
         filterDrinks={filterDrinks}
         clearFilter={clearFilter}
+        setDrinksData={setDrinksData}
       />
       <div className="all-cocktails__grid">
         {
