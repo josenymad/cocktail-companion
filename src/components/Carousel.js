@@ -26,16 +26,6 @@ const Carousel = ({ slides }) => {
 
   return (
     <div className="carousel">
-      <FontAwesomeIcon
-        className="carousel__left-arrow"
-        icon={faArrowLeft}
-        onClick={previousSlide}
-      />
-      <FontAwesomeIcon
-        className="carousel__right-arrow"
-        icon={faArrowRight}
-        onClick={nextSlide}
-      />
       {slides.map((slide, index) => {
         return (
           <div
@@ -56,6 +46,16 @@ const Carousel = ({ slides }) => {
           </div>
         );
       })}
+      <FontAwesomeIcon
+        className="carousel__left-arrow"
+        icon={faArrowLeft}
+        onClick={previousSlide}
+      />
+      <FontAwesomeIcon
+        className="carousel__right-arrow"
+        icon={faArrowRight}
+        onClick={nextSlide}
+      />
     </div>
   );
 };

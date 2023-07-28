@@ -1,27 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Rubik:wght@300&display=swap');
+
 .carousel {
   position: relative;
   height: 100vh;
-  display: flex;
   justify-content: center;
   margin: 1.5rem auto 1.5rem 0.75rem;
 }
 
 .carousel__right-arrow {
   position: absolute;
-  top: 55%;
+  top: 31rem;
   right: 1rem;
   font-size: 1.5rem;
-  color: #fff;
   cursor: pointer;
   user-select: none;
 }
 
 .carousel__left-arrow {
   position: absolute;
-  top: 55%;
+  top: 31rem;
   left: 1rem;
   font-size: 1.5rem;
-  color: #fff;
   cursor: pointer;
   user-select: none;
 }
@@ -30,4 +29,8 @@
   width: 30rem;
   height: 30rem;
   border-radius: 10px;
+}
+
+.carousel__title {
+  font-family: 'Kiwi Maru', serif;
 }
