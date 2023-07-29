@@ -5,7 +5,12 @@ import "../styles/carousel.css";
 
 const Carousel = ({ slides }) => {
   const [currentImage, setCurrentImage] = useState(0);
-  const slideLength = slides.length;
+
+  let slideLength = 0;
+
+  if (slides !== null && slides !== undefined) {
+    slideLength = slides.length;
+  }
 
   const nextSlide = () => {
     setCurrentImage(currentImage === slideLength - 1 ? 0 : currentImage + 1);
@@ -15,12 +20,32 @@ const Carousel = ({ slides }) => {
     setCurrentImage(currentImage === 0 ? slideLength - 1 : currentImage - 1);
   };
 
-  if (!slideLength) {
+  if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
 
   return (
     <div className="carousel">
+      {slides.map((slide, index) => {
+        return (
+          <div
+            className={index === currentImage ? "slide active" : "slide"}
+            key={slide.idDrink}
+          >
+            {index === currentImage && (
+              <div>
+                <img
+                  src={slide.strDrinkThumb}
+                  alt="cocktail"
+                  className="carousel__image"
+                  data-testid="current__image"
+                />
+                <p className="carousel__title">{slide.strDrink}</p>
+              </div>
+            )}
+          </div>
+        );
+      })}
       <FontAwesomeIcon
         className="carousel__left-arrow"
         icon={faArrowLeft}
@@ -31,26 +56,6 @@ const Carousel = ({ slides }) => {
         icon={faArrowRight}
         onClick={nextSlide}
       />
-      {slides.map((slide, index) => {
-        return (
-          <div
-            className={index === currentImage ? "slide active" : "slide"}
-            key={slide.id}
-          >
-            {index === currentImage && (
-              <div>
-                <img
-                  src={slide.image}
-                  alt={slide.alt}
-                  className="carousel__image"
-                  data-testid="current__image"
-                />
-                <p className="carousel__title">{slide.title}</p>
-              </div>
-            )}
-          </div>
-        );
-      })}
     </div>
   );
 };
