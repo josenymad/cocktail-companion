@@ -7,14 +7,20 @@ import BestBarware from "./Barware";
 import Home from "./Home";
 import getCocktails from "../requests/getCocktails";
 import Title from './Title';
+import filterCocktails from "../requests/filterCocktails";
 
 const App = () => {
   const [selectedDrink, setSelectedDrink] = useState({});
   const [drinksData, setDrinksData] = useState({});
   const [searchQuery, setSearchQuery] = useState("");
+  const [filteredDrinks, setFilteredDrinks] = useState([]);
+  const spirits = ["Rum", "Vodka", "Gin", "Whiskey", "Tequila", "Brandy"];
 
   useEffect(() => {
-    getCocktails(setDrinksData);
+    async function fetchData() {
+      await getCocktails(setDrinksData);
+    }
+    fetchData();
   }, [searchQuery]);
 
   const handleInputChange = (event) => {
@@ -24,6 +30,15 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     getCocktails(setDrinksData, searchQuery);
+  };
+
+  const filterDrinks = (event) => {
+    filterCocktails(event.target.value, setFilteredDrinks);
+  };
+
+  const clearFilter = () => {
+    setSearchQuery("");
+    setFilteredDrinks([]);
   };
 
   return (
@@ -37,7 +52,7 @@ const App = () => {
       />
       <Title />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home drinksData={drinksData} />} />
         <Route path="best-barware" element={<BestBarware />} />
         <Route
           path="all-cocktails"
@@ -48,6 +63,10 @@ const App = () => {
               setDrinksData={setDrinksData}
               setSelectedDrink={setSelectedDrink}
               searchQuery={searchQuery}
+              filterDrinks={filterDrinks}
+              spirits={spirits}
+              filteredDrinks={filteredDrinks}
+              clearFilter={clearFilter}
             />
           }
         />

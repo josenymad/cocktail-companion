@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/home.css";
 import Carousel from "./Carousel";
-import carouselData from "./CarouselData";
 
-const Home = () => {
+const Home = ({ drinksData }) => {
+  const { drinks } = drinksData;
+
   return (
     <div className="home">
       <p className="home__text">
@@ -13,7 +14,7 @@ const Home = () => {
         ingredient, check out our favourites or let us surprise you with our
         random cocktail generator!
       </p>
-      <Carousel slides={carouselData} />
+      <Carousel slides={drinks} />
     </div>
   );
 };
