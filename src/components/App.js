@@ -6,11 +6,14 @@ import AllCocktails from "./AllCocktails";
 import BestBarware from "./Barware";
 import Home from "./Home";
 import getCocktails from "../requests/getCocktails";
+import filterCocktails from "../requests/filterCocktails";
 
 const App = () => {
   const [selectedDrink, setSelectedDrink] = useState({});
   const [drinksData, setDrinksData] = useState({});
   const [searchQuery, setSearchQuery] = useState("");
+  const [filteredDrinks, setFilteredDrinks] = useState([]);
+  const spirits = ["Rum", "Vodka", "Gin", "Whiskey", "Tequila", "Brandy"];
 
   useEffect(() => {
     async function fetchData() {
@@ -26,6 +29,15 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     getCocktails(setDrinksData, searchQuery);
+  };
+
+  const filterDrinks = (event) => {
+    filterCocktails(event.target.value, setFilteredDrinks);
+  };
+
+  const clearFilter = () => {
+    setSearchQuery("");
+    setFilteredDrinks([]);
   };
 
   return (
@@ -47,6 +59,10 @@ const App = () => {
               setDrinksData={setDrinksData}
               setSelectedDrink={setSelectedDrink}
               searchQuery={searchQuery}
+              filterDrinks={filterDrinks}
+              spirits={spirits}
+              filteredDrinks={filteredDrinks}
+              clearFilter={clearFilter}
             />
           }
         />
