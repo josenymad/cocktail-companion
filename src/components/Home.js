@@ -7,6 +7,7 @@ const Home = ({ drinksData }) => {
 
   return (
     <div className="home">
+      <Carousel slides={drinks} />
       <p className="home__text">
         Welcome to Cocktail Companion! We have got you covered with an extensive
         range of delicious drinks, barware to suit all budgets and easy to
@@ -14,7 +15,6 @@ const Home = ({ drinksData }) => {
         ingredient, check out our most popular drinks or let us surprise you
         with a random cocktail selection!
       </p>
-      <Carousel slides={drinks} />
     </div>
   );
 };
