@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import axios from "axios";
 import App from "../components/App";
@@ -16,11 +16,13 @@ describe("App", () => {
       ],
     };
     jest.spyOn(axios, "get").mockResolvedValue(mockData);
-    const { asFragment } = await render(
+    const { asFragment } = render(
       <MemoryRouter>
         <App />
       </MemoryRouter>,
     );
-    expect(asFragment()).toMatchSnapshot();
+    await waitFor(() => {
+      expect(asFragment()).toMatchSnapshot();
+    });
   });
 });
