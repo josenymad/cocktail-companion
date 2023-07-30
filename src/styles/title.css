@@ -1,7 +1,10 @@
 .navbar {
     display: flex;
     flex-direction: column;
-    padding-top: 20%;
 }
 
-
+@media (max-width: 900px) {
+    .navbar{
+        padding-top: 20%;
+    }
+}
