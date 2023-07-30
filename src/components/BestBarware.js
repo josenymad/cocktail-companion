@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import React, { useState } from "react";
-import "../styles/Barware.css";
+import "../styles/bestBarware.css";
 
 const BestBarware = () => {
   const [currentSection, setCurrentSection] = useState(0);

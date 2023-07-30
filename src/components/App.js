@@ -4,7 +4,7 @@ import "../styles/app.css";
 import BurgerNav from "./BurgerNav";
 import Navbar from "./Navbar";
 import AllCocktails from "./AllCocktails";
-import BestBarware from "./Barware";
+import BestBarware from "./BestBarware";
 import Home from "./Home";
 import getCocktails from "../requests/getCocktails";
 import Title from "./Title";

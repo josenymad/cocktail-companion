@@ -17,6 +17,9 @@
     .navbar {
     padding-top: 10%;
 }
+
+@media (max-width: 900px) {
+    .navbar{
+        padding-top: 20%;
+    }
 }
-
-
