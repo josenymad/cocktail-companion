@@ -8,19 +8,19 @@ const Navbar = ({ searchQuery, handleInputChange, handleSubmit }) => {
   return (
     <ul className="navbar-list">
       <li className="navbar-list__item">
-        <Link to="/">HOME</Link>
+        <Link to="/">Home</Link>
       </li>
       <li className="navbar-list__item">
-        <Link to="best-barware">BEST BARWARE</Link>
+        <Link to="best-barware">Best Barware</Link>
       </li>
       <li className="navbar-list__item">
-        <Link to="all-cocktails">ALL COCKTAILS</Link>
+        <Link to="all-cocktails">All Cocktails</Link>
       </li>
       <li className="navbar-list__item">
         <form className="navbar-list__search" onSubmit={handleSubmit}>
           <label htmlFor="search">{}</label>
           <input
-            placeholder="SEARCH COCKTAILS"
+            placeholder="Margarita"
             className="navbar-list__searchBoxText"
             type="search"
             id="search"

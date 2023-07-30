@@ -22,7 +22,7 @@ const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
           <form className="navbar-list__search" onSubmit={handleSubmit}>
             <label htmlFor="search">{}</label>
             <input
-              placeholder="SEARCH COCKTAILS"
+              placeholder="Martini"
               className="navbar-list__searchBoxText"
               type="search"
               id="search"
