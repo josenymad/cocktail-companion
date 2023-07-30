@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import "../styles/bestBarware.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const BestBarware = () => {
   const [currentSection, setCurrentSection] = useState(0);
@@ -221,15 +223,6 @@ const BestBarware = () => {
                   Remember, building a cocktail bar is an ongoing process, and
                   it's all about exploring new flavors, mixing techniques, and
                   discovering your favorite concoctions.
-                  <p>
-                    Congratulations on taking the first steps to create your
-                    home cocktail bar! Whether you're on a budget or looking to
-                    splurge, there's a suitable option for every enthusiast.
-                    Starting small and gradually expanding your collection will
-                    allow you to master the art of mixology and craft impressive
-                    cocktails for yourself and your guests. Cheers to your
-                    exciting cocktail journey!
-                  </p>
                 </div>
               </p>
             </div>
@@ -254,25 +247,21 @@ const BestBarware = () => {
         present three example budgets of £50, £100, and £200, to help you build
         your cocktail bar and craft delicious drinks at home.
       </p>
-      {renderSection()}
       <div className="Post-navigation">
-        <button
+        <FontAwesomeIcon
           className="Button-prev"
           type="button"
+          icon={faArrowLeft}
           onClick={handlePrevSection}
-          disabled={currentSection === 0}
-        >
-          Prev
-        </button>
-        <button
+        />
+        <FontAwesomeIcon
           className="Button-next"
           type="button"
+          icon={faArrowRight}
           onClick={handleNextSection}
-          disabled={currentSection === sections.length - 1}
-        >
-          Next
-        </button>
+        />
       </div>
+      {renderSection()}
     </div>
   );
 };
