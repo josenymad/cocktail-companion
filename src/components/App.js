@@ -60,7 +60,11 @@ const App = () => {
     <div className="app">
       <Title />
       {windowWidth >= 900 ? (
-        <Navbar />
+        <Navbar
+          searchQuery={searchQuery}
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+        />
       ) : (
         <BurgerNav
           searchQuery={searchQuery}

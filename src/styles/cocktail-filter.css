@@ -46,6 +46,7 @@
    border-radius: 15px;
    font-family: inherit;
    font-size: 1em;
+   transition: .3s;
 }
 
 .cocktail-filter__random-selection-header,
@@ -65,10 +66,14 @@
 .cocktail-filter__popular-button:focus,
 .cocktail-filter__non-alcoholic-button:focus {
     background-color: #B3FC8A;
+    transform: scale(1.05);
+
 }
 
 .cocktail-filter__clear-filter:hover,
 .cocktail-filter__spirit-button:hover,
 .cocktail-filter__spirit-button:focus {
     font-weight: 600;
+    background-color: #fdc4f7;
+    transform: scale(1.05);
 }
