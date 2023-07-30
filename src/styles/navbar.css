@@ -2,8 +2,26 @@
     list-style: none;
     text-decoration: none;
     display: flex;
-    justify-content: space-around;
-    margin: 2em;
-    background-color: #FFE0E4;
     padding: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-list__item {
+    list-style: none;
+    margin-right: 30px;
+}
+
+a:hover {
+    color: #8a1e1e;
+}
+
+a:focus {
+    color: #8a1e1e;
+}
+
+a {
+    color: #373a47;
+    text-decoration: none;
+    font-weight: 500;
 }
