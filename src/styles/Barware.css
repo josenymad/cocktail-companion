@@ -60,3 +60,27 @@
     cursor: not-allowed;
   }
   
+  @media screen and (max-width: 800px) {
+    .Post {
+      padding: 0;
+    }
+
+    .Post-text {
+      padding: 0;
+      font-size: 0.8rem;
+      padding-bottom: 5%;
+      width: 95%;
+    }
+
+    .cocktailImage {
+      max-height: 20rem;
+      float: none;
+      margin-right: 0;
+    }
+
+    .Post-navigation {
+      width: 95%;
+      padding: 0.5rem;
+      
+    }
+  }

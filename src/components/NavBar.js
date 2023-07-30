@@ -3,33 +3,32 @@ import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { slide as Menu } from "react-burger-menu";
 
 const NavBar = ({ searchQuery, handleInputChange, handleSubmit }) => {
   return (
-    <div className="navbar">
-      <div className="navbar-titles">
-        <h1 className="navbar-title__header">Cocktail Companion</h1>
-        <h2 className="navbar-title__slogan">The Ultimate Cocktail Guide</h2>
-      </div>
+    <Menu>
       <ul className="navbar-list">
         <li className="navbar-list__item">
-          <Link to="/">Home</Link>
+          <Link to="/">HOME</Link>
         </li>
         <li className="navbar-list__item">
-          <Link to="best-barware">Best Barware</Link>
+          <Link to="best-barware">BEST BARWARE</Link>
         </li>
         <li className="navbar-list__item">
-          <Link to="all-cocktails">All Cocktails</Link>
+          <Link to="all-cocktails">ALL COCKTAILS</Link>
         </li>
         <li className="navbar-list__item">
-          <form onSubmit={handleSubmit}>
+          <form className="navbar-list__search" onSubmit={handleSubmit}>
             <label htmlFor="search">{}</label>
             <input
+              placeholder="SEARCH COCKTAILS"
+              className="navbar-list__searchBoxText"
               type="search"
               id="search"
               value={searchQuery}
               onChange={handleInputChange}
-            />
+            /> 
             <label htmlFor="search-button">{}</label>
             <button
               type="submit"
@@ -41,7 +40,7 @@ const NavBar = ({ searchQuery, handleInputChange, handleSubmit }) => {
           </form>
         </li>
       </ul>
-    </div>
+      </Menu>
   );
 };
 

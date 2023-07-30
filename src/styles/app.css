@@ -2,3 +2,12 @@ body {
     background-color: #FDD1C4;
     text-align: center;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  #page-wrap {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }

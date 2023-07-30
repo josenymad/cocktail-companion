@@ -6,6 +6,7 @@ import AllCocktails from "./AllCocktails";
 import BestBarware from "./Barware";
 import Home from "./Home";
 import getCocktails from "../requests/getCocktails";
+import Title from './Title';
 import filterCocktails from "../requests/filterCocktails";
 
 const App = () => {
@@ -46,7 +47,10 @@ const App = () => {
         searchQuery={searchQuery}
         handleInputChange={handleInputChange}
         handleSubmit={handleSubmit}
+        pageWrapId="page-wrap"
+        outerContainerId="outer-container"
       />
+      <Title />
       <Routes>
         <Route path="/" element={<Home drinksData={drinksData} />} />
         <Route path="best-barware" element={<BestBarware />} />
