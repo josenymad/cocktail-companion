@@ -5,7 +5,7 @@ import getRandomDrink from "../requests/getRandomDrink";
 import getMostPopular from "../requests/getMostPopular";
 import getNonAlcoholic from "../requests/getNonAlcoholic";
 
-const CocktailFilter = ({ setDrinksData }) => {
+const CocktailFilter = ({ spirits, filterDrinks, clearFilter, setDrinksData }) => {
   const handleRandomSelection = () => {
     getRandomSelection(setDrinksData);
   };
@@ -18,10 +18,24 @@ const CocktailFilter = ({ setDrinksData }) => {
   const handleNonAlcoholic = () => {
     getNonAlcoholic(setDrinksData);
   };
-
+  
   return (
     <div className="cocktail-filter">
-      <h3 className="cocktail-filter__spirit">Filter by Spirit</h3>
+      <h3 className="cocktail-filter__spirits-header">Find by Spirit</h3>
+      {spirits.map((spirit) => {
+        return (
+          <div className="cocktail-filter__spirit" key={spirit}>
+            <button
+              type="button"
+              className="cocktail-filter__spirit-button"
+              value={spirit}
+              onClick={filterDrinks}
+            >
+              {spirit}
+            </button>
+          </div>
+        );
+      })}
       <h3 className="cocktail-filter__random ">Random</h3>
       <button type="button" onClick={handleRandomSelection}>
         Selection
@@ -37,6 +51,13 @@ const CocktailFilter = ({ setDrinksData }) => {
       <button type="button" onClick={handleNonAlcoholic}>
         Search
       </button>
+      <button
+        type="button"
+        className="cocktail-filter__clear-filter"
+        onClick={clearFilter}
+      >
+        Clear search and filter
+      </button>  
     </div>
   );
 };

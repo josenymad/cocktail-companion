@@ -28,7 +28,7 @@ const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
               id="search"
               value={searchQuery}
               onChange={handleInputChange}
-            /> 
+            />
             <label htmlFor="search-button">{}</label>
             <button
               type="submit"
@@ -40,7 +40,7 @@ const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
           </form>
         </li>
       </ul>
-      </Menu>
+    </Menu>
   );
 };
 

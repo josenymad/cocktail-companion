@@ -5,6 +5,23 @@ exports[`Carousel renders correctly 1`] = `
   <div
     class="carousel"
   >
+    <div
+      class="slide active"
+    >
+      <div>
+        <img
+          alt="cocktail"
+          class="carousel__image"
+          data-testid="current__image"
+        />
+        <p
+          class="carousel__title"
+        />
+      </div>
+    </div>
+    <div
+      class="slide"
+    />
     <svg
       aria-hidden="true"
       class="svg-inline--fa fa-arrow-left carousel__left-arrow"
@@ -35,22 +52,6 @@ exports[`Carousel renders correctly 1`] = `
         fill="currentColor"
       />
     </svg>
-    <div
-      class="slide active"
-    >
-      <div>
-        <img
-          class="carousel__image"
-          data-testid="current__image"
-        />
-        <p
-          class="carousel__title"
-        />
-      </div>
-    </div>
-    <div
-      class="slide"
-    />
   </div>
 </DocumentFragment>
 `;
