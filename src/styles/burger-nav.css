@@ -1,15 +1,15 @@
-.navbar-list {
+.burger-navbar-list {
     list-style: none;
     text-decoration: none;
-    display: flex;
     padding: 1em;
 }
 
-.navbar-list__item {
-    margin-bottom: 30px;
+.burger-navbar-list__item {
     text-align: left;
-    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
     transition: color 0.2s;
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
 a:hover {
