@@ -10,7 +10,6 @@ import getCocktails from "../requests/getCocktails";
 import Title from "./Title";
 import filterCocktails from "../requests/filterCocktails";
 
-
 const App = () => {
   const [selectedDrink, setSelectedDrink] = useState({});
   const [drinksData, setDrinksData] = useState({});
@@ -58,6 +57,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <Title />
       {windowWidth >= 900 ? (
         <Navbar />
       ) : (
@@ -69,7 +69,6 @@ const App = () => {
           outerContainerId="outer-container"
         />
       )}
-      <Title />
       <Routes>
         <Route path="/" element={<Home drinksData={drinksData} />} />
         <Route path="best-barware" element={<BestBarware />} />
