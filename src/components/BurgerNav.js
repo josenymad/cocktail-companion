@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/navbar.css";
+import "../styles/burger-nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { slide as Menu } from "react-burger-menu";
 
-const NavBar = ({ searchQuery, handleInputChange, handleSubmit }) => {
+const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
   return (
     <Menu>
       <ul className="navbar-list">
@@ -28,7 +28,7 @@ const NavBar = ({ searchQuery, handleInputChange, handleSubmit }) => {
               id="search"
               value={searchQuery}
               onChange={handleInputChange}
-            /> 
+            />
             <label htmlFor="search-button">{}</label>
             <button
               type="submit"
@@ -40,8 +40,8 @@ const NavBar = ({ searchQuery, handleInputChange, handleSubmit }) => {
           </form>
         </li>
       </ul>
-      </Menu>
+    </Menu>
   );
 };
 
-export default NavBar;
+export default BurgerNav;
