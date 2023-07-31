@@ -10,6 +10,32 @@
     overflow: auto;
 }
 
+@media (max-width: 900px) {
+.cocktail-details,
+.cocktail-details__container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    left: 0;
+    max-height: 100vh;
+    padding-right: 5%;
+    padding-top: 7%;
+}
+
+.cocktail-details__text {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.cocktail-details__button {
+    display: flex;
+    position: absolute;
+    left: 80%;
+}
+}
+
 .cocktail-details__container {
     display: flex;
 }
