@@ -1,9 +1,29 @@
 .cocktail-card__button {
     margin: 1em;
-    padding: 1em;
+    padding: 1.5em;
+    background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
+    border-style: none;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.cocktail-card__button:hover {
+    transform: scale(1.05);
+    box-shadow: inset 0 -72px 0 0 #CEFFAD, 0 6px 0 0 #B3FC8A;
+    .cocktail-card__name {
+        transform: translateY(30px);
+    }
 }
 
 .cocktail-card__thumbnail {
     width: 250px;
     height: auto;
+    border-radius: 3px;
+}
+
+.cocktail-card__name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: .05rem;
+    transition: .3s;
 }

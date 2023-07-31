@@ -1,10 +1,20 @@
-.navbar {
+.title {
     display: flex;
     flex-direction: column;
 }
 
-@media (max-width: 900px) {
-    .navbar{
-        padding-top: 20%;
-    }
+.navbar-title__header {
+    font-family: 'Yeseva One', cursive;
+    font-size: 3rem;
+}
+
+.navbar-title__slogan {
+    font-family: 'Arizonia', cursive;
+    font-size: 2rem;
+}
+
+@media screen and (max-width:700px) {
+    .navbar {
+    padding-top: 10%;
+}
 }
