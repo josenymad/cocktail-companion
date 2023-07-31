@@ -1,8 +1,8 @@
 .cocktail-details {
     position: fixed;
     background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
-    top: 3%;
-    left: 33%;
+    top: 2em;
+    right: 8em;
     padding: 1em;
     border-radius: 6px;
     box-shadow: 9px 9px 36px;
@@ -39,5 +39,13 @@
 }
 
 .cocktail-details__button:hover {
-    transform: translateY(-9px);
+    transform: translateY(6px);
 } 
+
+@media screen and (max-width: 1200px) {
+    .cocktail-details {
+        top: 10em;
+        right: 5%;
+        max-height: 450px;
+    }
+}
