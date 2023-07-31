@@ -1,40 +1,36 @@
 .carousel {
   position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  margin: 1.5rem auto 1.5rem 0.75rem;
 }
 
 .carousel__right-arrow {
   position: absolute;
-  top: 55%;
-  right: 1rem;
+  bottom: 1rem;
+  right: 5.5rem;
   font-size: 1.5rem;
-  color: #fff;
   cursor: pointer;
   user-select: none;
 }
 
 .carousel__left-arrow {
   position: absolute;
-  top: 55%;
-  left: 1rem;
+  bottom: 1rem;
+  left: 5.5rem;
   font-size: 1.5rem;
-  color: #fff;
   cursor: pointer;
   user-select: none;
 }
 
 .carousel__image {
-  width: 20rem;
-  height: 30rem;
+  width: 70%;
   border-radius: 10px;
 }
 
-@media screen and (max-width: 800px) {
+.carousel__title {
+  font-family: 'Kiwi Maru', serif;
+}
+
+@media screen and (max-width: 1023px) {
   .carousel {
-    align-items:center;
-    width: 100%;  
+    margin: 0 auto;
   }
 }

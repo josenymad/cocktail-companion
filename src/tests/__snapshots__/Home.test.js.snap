@@ -5,14 +5,23 @@ exports[`Home renders correctly 1`] = `
   <div
     class="home"
   >
-    <p
-      class="home__text"
-    >
-      Welcome to Cocktail Companion! We have got you covered with an extensive range of delicious drinks, barware to suit all budgets and easy to follow instructions to get you mixing cocktails in no time. Search by ingredient, check out our favourites or let us surprise you with our random cocktail generator!
-    </p>
     <div
       class="carousel"
     >
+      <div
+        class="slide active"
+      >
+        <div>
+          <img
+            alt="cocktail"
+            class="carousel__image"
+            data-testid="current__image"
+          />
+          <p
+            class="carousel__title"
+          />
+        </div>
+      </div>
       <svg
         aria-hidden="true"
         class="svg-inline--fa fa-arrow-left carousel__left-arrow"
@@ -43,30 +52,12 @@ exports[`Home renders correctly 1`] = `
           fill="currentColor"
         />
       </svg>
-      <div
-        class="slide active"
-      >
-        <div>
-          <img
-            alt="pink fizzy drink in short glass garnished with a slice of lemon"
-            class="carousel__image"
-            data-testid="current__image"
-            src="https://images.unsplash.com/photo-1583898350903-99fa829dad3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvY2t0YWlsfGVufDB8fDB8fHww&auto=format&fit=crop&w=1400&q=60"
-          />
-          <p
-            class="carousel__title"
-          >
-            Pink Gin and Tonic
-          </p>
-        </div>
-      </div>
-      <div
-        class="slide"
-      />
-      <div
-        class="slide"
-      />
     </div>
+    <p
+      class="home__text"
+    >
+      Welcome to Cocktail Companion! We have got you covered with an extensive range of delicious drinks, barware to suit all budgets and easy to follow instructions to get you mixing cocktails in no time. Search by ingredient, check out our most popular drinks or let us surprise you with a random cocktail selection!
+    </p>
   </div>
 </DocumentFragment>
 `;

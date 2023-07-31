@@ -6,4 +6,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
     margin-right: 2em;
+    border-radius: 9px;
+    font-family: 'Kiwi Maru', serif;
 }

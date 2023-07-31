@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/cocktail-details.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 const CocktailDetails = ({ selectedDrink, handleSelectDrink }) => {
   const ingredients = Object.entries(selectedDrink)
@@ -19,38 +21,41 @@ const CocktailDetails = ({ selectedDrink, handleSelectDrink }) => {
 
   return (
     <div className="cocktail-details">
-      <img
-        alt="cocktail"
-        src={selectedDrink.strDrinkThumb}
-        className="cocktail-details__image"
-      />
-      <div className="cocktail-details__text">
-        <h3 className="cocktail-details__name">{selectedDrink.strDrink}</h3>
-        <p className="cocktail-details__glass">{selectedDrink.strGlass}</p>
-        <p className="cocktail-details__ingredients">Ingredients:</p>
-        <ul className="cocktail-details__ingredients-list">
-          {ingredients.map((ingredient, index) => (
-            <li className="cocktail-details__ingredient" key={ingredient}>
-              {`${removeUndefined(measures[index])} ${ingredient}`}
-            </li>
-          ))}
-        </ul>
-        <p className="cocktail-details__instruction">Instructions:</p>
-        <p className="cocktail-details__instructions">
-          {selectedDrink.strInstructions}
-        </p>
-        {selectedDrink.strVideo ? (
-          <a href={selectedDrink.strVideo} target="_blank" rel="noreferrer">
-            Video
-          </a>
-        ) : null}
+      <div className="cocktail-details__container">
+        <img
+          alt="cocktail"
+          src={selectedDrink.strDrinkThumb}
+          className="cocktail-details__image"
+        />
+        <div className="cocktail-details__text">
+          <h3 className="cocktail-details__name">{selectedDrink.strDrink}</h3>
+          <p className="cocktail-details__glass">{selectedDrink.strGlass}</p>
+          <p className="cocktail-details__ingredients">Ingredients:</p>
+          <ul className="cocktail-details__ingredients-list">
+            {ingredients.map((ingredient, index) => (
+              <li className="cocktail-details__ingredient" key={ingredient}>
+                {`${removeUndefined(measures[index])} ${ingredient}`}
+              </li>
+            ))}
+          </ul>
+          <p className="cocktail-details__instruction">Instructions:</p>
+          <p className="cocktail-details__instructions">
+            {selectedDrink.strInstructions}
+          </p>
+          {selectedDrink.strVideo ? (
+            <a href={selectedDrink.strVideo} target="_blank" rel="noreferrer">
+              Video
+            </a>
+          ) : null}
+        </div>
       </div>
+
       <button
         type="button"
         onClick={() => handleSelectDrink({})}
         className="cocktail-details__button"
       >
-        Close
+        <FontAwesomeIcon icon={faCircleXmark} />
       </button>
     </div>
   );
