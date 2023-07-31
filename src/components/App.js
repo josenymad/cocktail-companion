@@ -58,7 +58,6 @@ const App = () => {
 
   return (
     <div className="app">
-      <Title />
       {windowWidth >= 900 ? (
         <Navbar
           searchQuery={searchQuery}
@@ -74,6 +73,7 @@ const App = () => {
           outerContainerId="outer-container"
         />
       )}
+      <Title />
       <Routes>
         <Route path="/" element={<Home drinksData={drinksData} />} />
         <Route path="best-barware" element={<BestBarware />} />
