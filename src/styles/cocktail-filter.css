@@ -1,7 +1,79 @@
 .cocktail-filter {
-    position: fixed;
+    position: sticky;
+    top: 4%;
     background-color: #FFE0E4;
     margin-left: 2em;
     padding: 1em;
-    width: 17em;
+    width: 21em;
+    float: left;
+    font-family: 'Kiwi Maru', serif;
+    border-radius: 9px;
+}
+
+.cocktail-filter__clear-filter,
+.cocktail-filter__spirit-button {
+    padding: 0.6em;
+    border-radius: 9px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: inherit;
+    width: 60%;
+}
+
+.cocktail-filter__spirits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1em;
+}
+
+.cocktail-filter__filters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.cocktail-filter__random-selection-button,
+.cocktail-filter__random-drink-button,
+.cocktail-filter__popular-button,
+.cocktail-filter__non-alcoholic-button {
+   border-style: solid;
+   border-width: 1px;
+   width: 75%;
+   background-color: #CEFFAD;
+   border-radius: 15px;
+   font-family: inherit;
+   font-size: 1em;
+   transition: .3s;
+}
+
+.cocktail-filter__random-selection-header,
+.cocktail-filter__random-drink-header,
+.cocktail-filter__popular-header,
+.cocktail-filter__non-alcoholic-header {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+.cocktail-filter__random-selection-button:hover,
+.cocktail-filter__random-drink-button:hover,
+.cocktail-filter__popular-button:hover,
+.cocktail-filter__non-alcoholic-button:hover,
+.cocktail-filter__random-selection-button:focus,
+.cocktail-filter__random-drink-button:focus,
+.cocktail-filter__popular-button:focus,
+.cocktail-filter__non-alcoholic-button:focus {
+    background-color: #B3FC8A;
+    transform: scale(1.05);
+
+}
+
+.cocktail-filter__clear-filter:hover,
+.cocktail-filter__spirit-button:hover,
+.cocktail-filter__spirit-button:focus {
+    font-weight: 600;
+    background-color: #fdc4f7;
+    transform: scale(1.05);
 }

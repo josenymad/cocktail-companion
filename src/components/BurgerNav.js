@@ -8,21 +8,21 @@ import { slide as Menu } from "react-burger-menu";
 const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
   return (
     <Menu>
-      <ul className="navbar-list">
-        <li className="navbar-list__item">
+      <ul className="burger-navbar-list">
+        <li className="burger-navbar-list__item">
           <Link to="/">HOME</Link>
         </li>
-        <li className="navbar-list__item">
+        <li className="burger-navbar-list__item">
           <Link to="best-barware">BEST BARWARE</Link>
         </li>
-        <li className="navbar-list__item">
+        <li className="burger-navbar-list__item">
           <Link to="all-cocktails">ALL COCKTAILS</Link>
         </li>
-        <li className="navbar-list__item">
+        <li className="burger-navbar-list__item">
           <form className="navbar-list__search" onSubmit={handleSubmit}>
             <label htmlFor="search">{}</label>
             <input
-              placeholder="SEARCH COCKTAILS"
+              placeholder="Martini"
               className="navbar-list__searchBoxText"
               type="search"
               id="search"
