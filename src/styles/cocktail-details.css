@@ -49,3 +49,19 @@
         max-height: 450px;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .cocktail-details__container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cocktail-details {
+        width: 90%;
+    }
+    .cocktail-details__image {
+        width: 90%;
+        height: auto;
+    }
+}

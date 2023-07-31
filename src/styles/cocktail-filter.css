@@ -102,7 +102,7 @@
     }
     .cocktail-filter__filters {
         flex-direction: row;
-        height: 100px;
+        height: 110px;
     }
     .cocktail-filter__random-selection,
     .cocktail-filter__random-drink,
@@ -117,6 +117,31 @@
         width: 200px;
     }
     .cocktail-filter:hover {
-        height: 270px;
+        height: 290px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cocktail-filter__filters {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cocktail-filter:hover {
+        height: 360px;
+    }
+    .cocktail-filter__spirits {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cocktail-filter__filters {
+        height: 215px;
+    }
+    .cocktail-filter:hover {
+        height: 450px;
     }
 }
