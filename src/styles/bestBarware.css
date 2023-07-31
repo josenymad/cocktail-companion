@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 20rem;
-    padding-right: 20rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 0rem;
     padding-bottom: 10rem;
     background-color: #FDD1C4;
@@ -22,65 +22,75 @@
     align-items: flex-start;
     list-style: none;
   }
+
+  img {
+    border-radius: 5%;
+  }
   
   .cocktailImage {
     float: left;
-    max-height: 30rem;
+    max-height: 70vh;
     margin-right: 3rem;
   }
   
   .cocktailImageAlt {
     float: right;
-    max-height: 30rem;
+    max-height: 70vh;
     margin-left: 3rem;
   }
   
   .Post-navigation {
-    position: absolute; 
-    bottom: 25rem;
     display: flex;
     justify-content: space-between;
-    width: 70%; 
+    width: 20%; 
   }
   
   .Button-prev,
   .Button-next {
     cursor: pointer;
     padding: 0.5rem 1rem;
-    background-color: #FCACAC;
     color: black;
-    border: none;
+    border: 1px;
     border-radius: 5px;
   }
   
-  /* Disable the button when it's not clickable */
-  .Button-prev[disabled],
-  .Button-next[disabled] {
-    background-color: #dddddd;
-    cursor: not-allowed;
-  }
-  
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     .Post {
       padding: 0;
     }
 
-    .Post-text {
-      padding: 0;
+    .Post-text,
+    .Post-list,
+    .Post-intro {
+      padding-top: 0;
+      padding-left: 5%;
+      padding-right: 5%;
       font-size: 0.8rem;
-      padding-bottom: 5%;
-      width: 95%;
+      padding-bottom: 0%;
+      justify-content: center;
+      align-items: center;
     }
 
-    .cocktailImage {
+    .Post-title {
+      padding-left: 5%;
+      padding-right: 5%;
+      font-size: medium;
+    }
+
+    .cocktailImage,
+    .cocktailImageAlt {
       max-height: 20rem;
       float: none;
+      justify-content: center;
+      align-items: center;
+      margin-left: 0;
       margin-right: 0;
     }
 
-    .Post-navigation {
-      width: 95%;
-      padding: 0.5rem;
-      
+    .Button-prev,
+    .Button-next {
+      justify-content: center;
+      align-items: center;
+      padding: 0;
     }
   }
