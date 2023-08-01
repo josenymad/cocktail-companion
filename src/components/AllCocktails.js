@@ -36,7 +36,6 @@ const AllCocktails = ({
   return (
     <div className="all-cocktails">
       <CocktailFilter
-        className="cocktail-filter"
         spirits={spirits}
         filterDrinks={filterDrinks}
         clearFilter={clearFilter}

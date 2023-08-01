@@ -5,16 +5,23 @@
     padding: 1em;
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
+    margin-bottom: 2em;
     margin-right: 2em;
     border-radius: 9px;
     font-family: 'Kiwi Maru', serif;
 }
 
-@media (max-width: 900px) {
-.all-cocktails__grid {
-    grid-template-columns: 1fr; 
-    max-width: 100%; 
-    margin-right: 0; 
-    padding: 0.5em; 
+@media screen and (max-width: 1200px) {
+    .all-cocktails__grid {
+        grid-template-columns: 1fr 1fr;
+        margin-right: auto;
+        margin-top: 2rem;
+        max-width: 90%;
+    }
 }
+
+@media screen and (max-width: 900px) {
+    .all-cocktails__grid {
+        grid-template-columns: 1fr;
+    }
 }
