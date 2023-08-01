@@ -2,15 +2,23 @@
 
 .home {
   display: flex;
+  background-color: #FFE0E4;
+  border-radius: 9px;
+  width: 75%;
+  height: 28.5rem;
+  margin: 0 auto;
 }
 
 .home__text {
   font-family: 'Kiwi Maru', serif;
-  font-size: 2rem;
-  width: 45%;
-  margin: 2rem auto 0 0;
+  font-size: 1.5rem;
+  width: 60%;
+  height: 24.5rem;
+  border-radius: 9px;
+  border: 10px solid #FCACAC;
+  margin: 2rem auto 2rem 1rem;
+  padding: 2rem;
 }
-
 
 @media screen and (min-width:768px) and (max-width: 1023px) {
   .home {
