@@ -3,7 +3,6 @@ import "../styles/cocktail-filter.css";
 import getRandomSelection from "../requests/getRandomSelection";
 import getRandomDrink from "../requests/getRandomDrink";
 import getMostPopular from "../requests/getMostPopular";
-import getNonAlcoholic from "../requests/getNonAlcoholic";
 
 const CocktailFilter = ({
   spirits,
@@ -19,9 +18,6 @@ const CocktailFilter = ({
   };
   const handleMostPopular = () => {
     getMostPopular(setDrinksData);
-  };
-  const handleNonAlcoholic = () => {
-    getNonAlcoholic(setDrinksData);
   };
 
   return (
@@ -80,17 +76,6 @@ const CocktailFilter = ({
             className="cocktail-filter__popular-button"
           >
             <h4 className="cocktail-filter__popular-header">Most Popular</h4>
-          </button>
-        </div>
-        <div className="cocktail-filter__non-alcoholic">
-          <button
-            type="button"
-            onClick={handleNonAlcoholic}
-            className="cocktail-filter__non-alcoholic-button"
-          >
-            <h4 className="cocktail-filter__non-alcoholic-header">
-              Non-Alcoholic
-            </h4>
           </button>
         </div>
       </div>
