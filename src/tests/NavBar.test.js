@@ -1,27 +1,17 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/Navbar";
 
 describe("NavBar", () => {
-  it("renders cocktail companion", () => {
-    render(
+  it("renders correctly", () => {
+    const { asFragment } = render(
       <MemoryRouter>
         <NavBar />
       </MemoryRouter>,
     );
-    const title = screen.getByText(/cocktail companion/i);
-    expect(title).toBeInTheDocument();
-  });
 
-  it("renders the ultimate cocktail guide", () => {
-    render(
-      <MemoryRouter>
-        <NavBar />
-      </MemoryRouter>,
-    );
-    const slogan = screen.getByText(/the ultimate cocktail guide/i);
-    expect(slogan).toBeInTheDocument();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders home", () => {
@@ -31,6 +21,7 @@ describe("NavBar", () => {
       </MemoryRouter>,
     );
     const home = screen.getByText(/home/i);
+
     expect(home).toBeInTheDocument();
   });
 
@@ -40,7 +31,8 @@ describe("NavBar", () => {
         <NavBar />
       </MemoryRouter>,
     );
-    const bestBarware = screen.getByText(/home/i);
+    const bestBarware = screen.getByText(/best barware/i);
+
     expect(bestBarware).toBeInTheDocument();
   });
 
@@ -50,17 +42,30 @@ describe("NavBar", () => {
         <NavBar />
       </MemoryRouter>,
     );
-    const home = screen.getByText(/home/i);
-    expect(home).toBeInTheDocument();
+    const allCocktails = screen.getByText(/all cocktails/i);
+
+    expect(allCocktails).toBeInTheDocument();
   });
 
-  it("renders all cocktails", () => {
+  it("renders a search input", () => {
     render(
       <MemoryRouter>
         <NavBar />
       </MemoryRouter>,
     );
-    const allCocktails = screen.getByText(/home/i);
-    expect(allCocktails).toBeInTheDocument();
+    const searchInput = screen.getByPlaceholderText(/margarita/i);
+
+    expect(searchInput).toBeInTheDocument();
+  });
+
+  it("renders a search button", () => {
+    render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>,
+    );
+    const searchButton = screen.getByRole("button");
+
+    expect(searchButton).toBeInTheDocument();
   });
 });
