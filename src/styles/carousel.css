@@ -20,15 +20,6 @@
   user-select: none;
 }
 
-.carousel__image {
-  width: 70%;
-  border-radius: 10px;
-}
-
-.carousel__title {
-  font-family: 'Kiwi Maru', serif;
-}
-
 @media screen and (max-width: 1023px) {
   .carousel {
     margin: 0 auto;
