@@ -2,9 +2,10 @@
     list-style: none;
     text-decoration: none;
     display: flex;
-    padding: 1em;
+    padding: 0;
     justify-content: space-evenly;
     align-items: center;
+    margin: 0.5;
 }
 
 .navbar-list__item {
