@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Rubik:wght@300&display=swap');
-
-.home {
+.home__main {
   display: flex;
   background-color: #FFE0E4;
   border-radius: 9px;
@@ -11,13 +9,34 @@
 
 .home__text {
   font-family: 'Kiwi Maru', serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   width: 60%;
   height: 24.5rem;
   border-radius: 9px;
-  border: 10px solid #FCACAC;
+  background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
   margin: 2rem auto 2rem 1rem;
-  padding: 2rem;
+  padding: 2.5rem;
+}
+
+.home__guide {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.home__guide-text {
+  font-family: 'Kiwi Maru', serif;
+  font-size: 1rem;
+  background-color: #FFE0E4;
+  width: 30%;
+  padding: 1rem;
+  border-radius: 9px;
+}
+
+.home__guide-text:hover {
+  transform: scale(1.1);
+  background-color: #CEFFAD;
 }
 
 @media screen and (min-width:768px) and (max-width: 1023px) {
