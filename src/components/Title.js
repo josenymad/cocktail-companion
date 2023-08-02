@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/title.css";
+import logo2 from '../images/IMG_2674.png';
 
 const Title = () => {
   return (
@@ -10,6 +11,7 @@ const Title = () => {
           <h2 className="navbar-title__slogan">The Ultimate Cocktail Guide</h2>
         </div>
       </div>
+      <img src={logo2} alt="Logo" className="logo" />
     </div>
   );
 };
