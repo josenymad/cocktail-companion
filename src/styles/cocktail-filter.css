@@ -10,15 +10,6 @@
     border-radius: 9px;
 }
 
-@media (max-width: 900px) {
-    .cocktail-filter {
-    position: relative;
-    float: none;
-    width: 100%;
-    margin-left: 0;
-    }
-    }
-
 .cocktail-filter__clear-filter,
 .cocktail-filter__spirit-button {
     padding: 0.6em;
@@ -86,4 +77,3 @@
     background-color: #fdc4f7;
     transform: scale(1.05);
 }
-

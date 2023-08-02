@@ -1,9 +1,6 @@
 .title {
     display: flex;
     flex-direction: column;
-    /* padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 0; */
     padding: 0% 5%;
 }
 
@@ -25,4 +22,10 @@
     .navbar {
     padding-top: 10%;
 }
+
+    .navbar-title__header,
+    .navbar-title__slogan {
+    font-size: large;
+    padding-left: 20%;
+    }
 }
