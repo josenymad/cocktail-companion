@@ -1,81 +1,102 @@
 .home__main {
-  display: flex;
   background-color: #FFE0E4;
   border-radius: 9px;
-  width: 80%;
+  width: 62%;
   margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "carousel carousel intro intro intro"
+    "carousel carousel guide-one guide-two guide-three";
 }
 
-.text__intro {
+.home__carousel {
+  margin: 1rem 0;
+  grid-area: carousel;
+}
+
+.home__intro {
   font-family: 'Kiwi Maru', serif;
-  font-size: 1.4rem;
-  width: 90%;
-  height: 42%;
   border-radius: 9px;
   background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
-  padding: 1.7rem;
-  margin: 2rem auto 1rem auto;
-}
-
-.guide {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 1rem auto;
-}
-
-.guide__text {
-  font-family: 'Kiwi Maru', serif;
-  background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
-  width: 30%;
   padding: 1rem;
-  border-radius: 9px;
+  margin: 1rem 1rem 0.5rem 0;
+  grid-area: intro;
 }
 
-.guide__text:hover {
+.home__guide {
+  font-family: 'Kiwi Maru', serif;
+  border-radius: 9px;
+  background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem 1rem 0;
+}
+
+.home__guide:hover {
   transform: scale(1.1);
 }
 
+#guide-one {
+  grid-area: guide-one;
+}
+
+#guide-two {
+  grid-area: guide-two;
+}
+
+#guide-three {
+  grid-area: guide-three;
+}
+
 @media screen and (min-width:768px) and (max-width: 1023px) {
-
   .home__main {
-    flex-direction: column;
-    width: 50%;
-  }
-  
-  .text__intro {
-    width: 84%;
-    margin: 1rem auto
-  }
-
-  .guide {
-    flex-direction: column;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "carousel guide-one"
+      "carousel guide-two"
+      "carousel guide-three"
+      "intro intro"
   }
 
-  .guide__text {
-    width: 94%;
-    margin: 1rem auto
+  .home__carousel {
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  .home__intro {
+    margin: 1rem;
+  }
+
+  .home__guide {
+    margin: 1rem 1rem 0 0;
   }
 }
 
 @media screen and (max-width: 767px) {
   .home__main {
-    flex-direction: column;
     width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "carousel"
+      "intro"
+      "guide-one"
+      "guide-two" 
+      "guide-three"
+  }
+  
+  .home__intro {
+    margin: 0 1rem 1rem 1rem;
   }
 
-  .text__intro {
-    width: 90%;
-    margin: 1rem auto;
+  .home__guide {
+    margin: 0 1rem 1rem 1rem;
   }
 
-  .guide {
-    flex-direction: column;
-  }
-
-  .guide__text {
-    width: 100%;
-  }
 }
 
 
