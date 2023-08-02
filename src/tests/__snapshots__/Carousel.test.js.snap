@@ -12,11 +12,13 @@ exports[`Carousel renders correctly 1`] = `
         <img
           alt="cocktail"
           class="carousel__image"
-          data-testid="current__image"
+          src="mock-url1"
         />
         <p
           class="carousel__title"
-        />
+        >
+          mock-title1
+        </p>
       </div>
     </div>
     <div

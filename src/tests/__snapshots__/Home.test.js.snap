@@ -15,7 +15,6 @@ exports[`Home renders correctly 1`] = `
           <img
             alt="cocktail"
             class="carousel__image"
-            data-testid="current__image"
           />
           <p
             class="carousel__title"
