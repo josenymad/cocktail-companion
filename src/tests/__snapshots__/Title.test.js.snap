@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="title"
+  >
+    <div
+      class="navbar-titles"
+      id="outer-container"
+    >
+      <div
+        id="page-wrap"
+      >
+        <h1
+          class="navbar-title__header"
+        >
+          Cocktail Companion
+        </h1>
+        <h2
+          class="navbar-title__slogan"
+        >
+          The Ultimate Cocktail Guide
+        </h2>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

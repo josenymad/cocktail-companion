@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/burger-nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,15 +6,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { slide as Menu } from "react-burger-menu";
 import logo from "../images/OriginalLogo.png";
 
-const CloseMenuContext = React.createContext();
-
 const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
-  const closeMenu = useContext(CloseMenuContext);
-
-  const handleLinkClick = () => {
-    closeMenu();
-  };
-
   return (
     <Menu>
       <ul className="burger-navbar-list">

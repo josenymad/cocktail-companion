@@ -38,7 +38,6 @@ const Carousel = ({ slides }) => {
                   src={slide.strDrinkThumb}
                   alt="cocktail"
                   className="carousel__image"
-                  data-testid="current__image"
                 />
                 <p className="carousel__title">{slide.strDrink}</p>
               </div>
