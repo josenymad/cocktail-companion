@@ -1,13 +1,12 @@
 .carousel {
   position: relative;
-  height: 28rem;
-  width: 20rem;
-  margin: 2rem 1rem 2rem auto;
+  height: 24.5rem;
+  margin: 2rem 0 2rem 2rem;
 }
 
 .carousel__right-arrow {
   position: absolute;
-  bottom: 5rem;
+  bottom: 1rem;
   right: 1.5rem;
   font-size: 1.5rem;
   cursor: pointer;
@@ -16,7 +15,7 @@
 
 .carousel__left-arrow {
   position: absolute;
-  bottom: 5rem;
+  bottom: 1rem;
   left: 1.5rem;
   font-size: 1.5rem;
   cursor: pointer;
@@ -36,6 +35,6 @@
 
 @media screen and (max-width: 1023px) {
   .carousel {
-    margin: 0 auto;
+    margin: 1rem auto;
   }
 }
