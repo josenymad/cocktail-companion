@@ -4,6 +4,7 @@ import "../styles/burger-nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { slide as Menu } from "react-burger-menu";
+import logo from "../images/OriginalLogo.png";
 
 const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
   return (
@@ -39,6 +40,8 @@ const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
             </button>
           </form>
         </li>
+        <img src={logo} alt="logo" className="NavLogo" />
+
       </ul>
     </Menu>
   );
