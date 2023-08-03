@@ -7,13 +7,13 @@ describe("Carousel", () => {
     drinks: [
       {
         idDrink: "1",
-        image: "mock-url1",
-        title: "mock-title",
+        strDrinkThumb: "mock-url1",
+        strDrink: "mock-title1",
       },
       {
         idDrink: "2",
-        image: "mock-url2",
-        title: "mock-title",
+        strDrinkThumb: "mock-url2",
+        strDrink: "mock-title2",
       },
     ],
   };
@@ -27,6 +27,12 @@ describe("Carousel", () => {
   it("renders the correct image", () => {
     render(<Carousel slides={validProps.drinks} />);
 
-    expect(screen.getByTestId("current__image")).toBeInTheDocument();
+    expect(screen.getByAltText("cocktail")).toBeInTheDocument();
+  });
+
+  it("renders the correct title", () => {
+    render(<Carousel slides={validProps.drinks} />);
+
+    expect(screen.getByText("mock-title1")).toBeInTheDocument();
   });
 });
