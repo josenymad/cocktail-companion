@@ -1,12 +1,12 @@
 .cocktail-details {
     position: fixed;
     background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
-    top: 2em;
-    right: 8em;
+    top: 20%;
+    right: 20%;
     padding: 1em;
     border-radius: 6px;
     box-shadow: 9px 9px 36px;
-    max-height: 600px;
+    max-height: 500px;
     overflow: auto;
 }
 
