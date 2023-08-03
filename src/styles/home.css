@@ -45,9 +45,39 @@
   grid-area: guide-three;
 }
 
-@media screen and (min-width:768px) and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .home__main {
     width: 90%;
+    min-width: 345px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "carousel"
+      "intro"
+      "guide-one"
+      "guide-two" 
+      "guide-three"
+  }
+
+  .home__carousel {
+    margin: 1rem auto;
+  }
+  
+  .home__intro {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .home__guide {
+    margin: 0 1rem 1rem 1rem;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+  .home__main {
+    width: 90%;
+    max-width: 660px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -71,33 +101,19 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width:992px) and (max-width: 1199px) {
   .home__main {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "carousel"
-      "intro"
-      "guide-one"
-      "guide-two" 
-      "guide-three"
+    min-width: 893px;
   }
-
-  .home__carousel {
-    margin: 1rem auto;
-  }
-  
-  .home__intro {
-    margin: 0 1rem 1rem 1rem;
-  }
-
-  .home__guide {
-    margin: 0 1rem 1rem 1rem;
-  }
-
 }
+
+@media screen and (min-width:1200px) and (max-width: 1919px) {
+  .home__main {
+    min-width: 893px;
+    max-width: 893px;
+  }
+}
+
 
 
 
