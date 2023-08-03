@@ -6,7 +6,6 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { slide as Menu } from "react-burger-menu";
 import logo from "../images/OriginalLogo.png";
 
-
 const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
   return (
     <Menu>
@@ -42,7 +41,6 @@ const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
           </form>
         </li>
         <img src={logo} alt="logo" className="NavLogo" />
-
       </ul>
     </Menu>
   );
