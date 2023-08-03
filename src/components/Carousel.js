@@ -2,8 +2,10 @@ import { React, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "../styles/carousel.css";
+import CocktailCard from "./CocktailCard";
+import CocktailDetails from "./CocktailDetails";
 
-const Carousel = ({ slides }) => {
+const Carousel = ({ selectedDrink, setSelectedDrink, slides }) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   let slideLength = 0;
@@ -24,6 +26,10 @@ const Carousel = ({ slides }) => {
     return null;
   }
 
+  const handleSelectDrink = (selection) => {
+    setSelectedDrink(selection);
+  };
+
   return (
     <div className="carousel">
       {slides.map((slide, index) => {
@@ -33,13 +39,12 @@ const Carousel = ({ slides }) => {
             key={slide.idDrink}
           >
             {index === currentImage && (
-              <div>
-                <img
-                  src={slide.strDrinkThumb}
-                  alt="cocktail"
-                  className="carousel__image"
+              <div className="cocktail-card">
+                <CocktailCard
+                  drink={slide}
+                  handleSelectDrink={handleSelectDrink}
+                  data-testid="current__image"
                 />
-                <p className="carousel__title">{slide.strDrink}</p>
               </div>
             )}
           </div>
@@ -55,6 +60,12 @@ const Carousel = ({ slides }) => {
         icon={faArrowRight}
         onClick={nextSlide}
       />
+      {Object.keys(selectedDrink).length ? (
+        <CocktailDetails
+          selectedDrink={selectedDrink}
+          handleSelectDrink={handleSelectDrink}
+        />
+      ) : null}
     </div>
   );
 };

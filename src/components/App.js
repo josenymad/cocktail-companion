@@ -75,7 +75,16 @@ const App = () => {
         />
       )}
       <Routes>
-        <Route path="/" element={<Home drinksData={drinksData} />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              drinksData={drinksData}
+              setSelectedDrink={setSelectedDrink}
+              selectedDrink={selectedDrink}
+            />
+          }
+        />
         <Route path="best-barware" element={<BestBarware />} />
         <Route
           path="all-cocktails"
