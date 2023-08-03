@@ -6,7 +6,7 @@
     padding: 1em;
     border-radius: 6px;
     box-shadow: 9px 9px 36px;
-    max-height: 500px;
+    max-height: 80%;
     overflow: auto;
 }
 
@@ -44,15 +44,22 @@
 
 @media screen and (max-width: 1200px) {
     .cocktail-details {
-        top: 10em;
+        top: 45%;
         right: 5%;
-        max-height: 450px;
+        max-height: 51%;
+    }
+    .cocktail-details__image {
+        height: 300px;
+        align-self: flex-start;
     }
 }
 
 @media screen and (max-width: 900px) {
     .cocktail-details__container {
         flex-direction: column;
+    }
+    .cocktail-details__image {
+        align-self: center;
     }
 }
 
@@ -61,7 +68,6 @@
         width: 90%;
     }
     .cocktail-details__image {
-        width: 90%;
-        height: auto;
+        height: 270px;
     }
 }

@@ -27,3 +27,9 @@
     letter-spacing: .05rem;
     transition: .3s;
 }
+
+@media screen and (max-width: 400px) {
+    .cocktail-card__thumbnail {
+        width: 210px;
+    }
+}
