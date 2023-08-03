@@ -36,7 +36,11 @@ a {
     border-width: 1px;
 }
 
+.navbar-list__button {
+    transition: .3s;
+}
+
 .navbar-list__button:hover {
-    transform: scale(1.1);
-    background-color: #fdc4f7;
+    transform:translateX(-6px);
+    background-color: #CEFFAD;
 }
