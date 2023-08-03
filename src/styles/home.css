@@ -1,52 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Rubik:wght@300&display=swap');
-
-.home {
-  display: flex;
+.home__main {
+  background-color: #FFE0E4;
+  border-radius: 9px;
+  width: 62%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "carousel carousel intro intro intro"
+    "carousel carousel guide-one guide-two guide-three";
 }
 
-.home__text {
+.home__carousel {
+  margin: 1rem 0 1rem 1rem;
+  grid-area: carousel;
+}
+
+.home__intro {
   font-family: 'Kiwi Maru', serif;
-  font-size: 2rem;
-  width: 45%;
-  margin: 2rem auto 0 0;
+  border-radius: 9px;
+  background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
+  padding: 1rem;
+  margin: 1rem 1rem 0.5rem 0;
+  grid-area: intro;
 }
 
+.home__guide {
+  font-family: 'Kiwi Maru', serif;
+  border-radius: 9px;
+  background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem 1rem 0;
+}
 
-@media screen and (min-width:768px) and (max-width: 1023px) {
-  .home {
-    flex-direction: column;
-  }
+#guide-one {
+  grid-area: guide-one;
+}
 
-  .home__text {
-    font-size: 1.2rem;
-    margin: 0 auto;
-    width: 67%;
-  }
+#guide-two {
+  grid-area: guide-two;
+}
+
+#guide-three {
+  grid-area: guide-three;
 }
 
 @media screen and (max-width: 767px) {
-  .home {
-    flex-direction: column;
+  .home__main {
+    width: 90%;
+    min-width: 345px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "carousel"
+      "intro"
+      "guide-one"
+      "guide-two" 
+      "guide-three"
   }
 
-  .home__text {
-    font-size: 1rem;
-    margin: 0 auto;
-    width: 75%;
+  .home__carousel {
+    margin: 1rem auto;
+  }
+  
+  .home__intro {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .home__guide {
+    margin: 0 1rem 1rem 1rem;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .home {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+@media screen and (min-width:768px) and (max-width: 991px) {
+  .home__main {
+    width: 90%;
+    max-width: 660px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "intro intro"
+      "carousel guide-one"
+      "carousel guide-two"
+      "carousel guide-three" 
   }
 
-  .home__text {
-    font-size: 1.5rem;
-    width: 95%;
-    padding-left: 5%;
+  .home__carousel {
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .home__intro {
+    margin: 1rem;
+  }
+
+  .home__guide {
+    margin: 0 1rem 1rem 0;
   }
 }
+
+@media screen and (min-width:992px) and (max-width: 1199px) {
+  .home__main {
+    min-width: 893px;
+  }
+}
+
+@media screen and (min-width:1200px) and (max-width: 1919px) {
+  .home__main {
+    min-width: 893px;
+    max-width: 893px;
+  }
+}
+
+
+
 
