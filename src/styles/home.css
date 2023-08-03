@@ -12,7 +12,7 @@
 }
 
 .home__carousel {
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 1rem;
   grid-area: carousel;
 }
 
@@ -31,10 +31,6 @@
   background: linear-gradient(to bottom right, #fdc4f7, 30%, #FCACAC);
   padding: 0.5rem 1rem;
   margin: 0.5rem 1rem 1rem 0;
-}
-
-.home__guide:hover {
-  transform: scale(1.1);
 }
 
 #guide-one {
@@ -56,14 +52,14 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
+      "intro intro"
       "carousel guide-one"
       "carousel guide-two"
-      "carousel guide-three"
-      "intro intro"
+      "carousel guide-three" 
   }
 
   .home__carousel {
-    margin: 1rem 1rem 0 1rem;
+    margin: 0 1rem 1rem 1rem;
   }
 
   .home__intro {
@@ -71,7 +67,7 @@
   }
 
   .home__guide {
-    margin: 1rem 1rem 0 0;
+    margin: 0 1rem 1rem 0;
   }
 }
 
@@ -87,6 +83,10 @@
       "guide-one"
       "guide-two" 
       "guide-three"
+  }
+
+  .home__carousel {
+    margin: 1rem auto;
   }
   
   .home__intro {

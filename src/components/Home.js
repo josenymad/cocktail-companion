@@ -31,7 +31,7 @@ const Home = ({ drinksData, selectedDrink, setSelectedDrink }) => {
         </p>
         <p className="home__guide" id="guide-three">
           After something specific? Check out All Cocktails to search by name,
-          filter by spirit and view our collections.
+          filter by spirit or view our collections.
         </p>
       </div>
     </div>
