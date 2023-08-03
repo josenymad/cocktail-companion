@@ -1,11 +1,13 @@
 .carousel {
   position: relative;
+  width: 20rem;
+  height: 24.5rem;
 }
 
 .carousel__right-arrow {
   position: absolute;
   bottom: 1rem;
-  right: 5.5rem;
+  right: 2rem;
   font-size: 1.5rem;
   cursor: pointer;
   user-select: none;
@@ -14,23 +16,20 @@
 .carousel__left-arrow {
   position: absolute;
   bottom: 1rem;
-  left: 5.5rem;
+  left: 2rem;
   font-size: 1.5rem;
   cursor: pointer;
   user-select: none;
 }
 
-.carousel__image {
-  width: 70%;
-  border-radius: 10px;
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
 }
 
-.carousel__title {
-  font-family: 'Kiwi Maru', serif;
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }
 
-@media screen and (max-width: 1023px) {
-  .carousel {
-    margin: 0 auto;
-  }
-}
