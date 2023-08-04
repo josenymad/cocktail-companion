@@ -11,7 +11,7 @@
     font-family: 'Kiwi Maru', serif;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .all-cocktails__grid {
         grid-template-columns: 1fr 1fr;
         margin-right: auto;

@@ -42,7 +42,7 @@
     transform: translateY(6px);
 } 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
     .cocktail-details {
         top: 45%;
         right: 5%;
