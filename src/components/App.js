@@ -80,6 +80,7 @@ const App = () => {
           element={
             <Home
               drinksData={drinksData}
+              searchQuery={searchQuery}
               setSelectedDrink={setSelectedDrink}
               selectedDrink={selectedDrink}
             />
