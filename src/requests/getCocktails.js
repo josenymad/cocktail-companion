@@ -12,7 +12,8 @@ const getCocktails = async (setDrinksData, searchQuery) => {
     const response = await axios.get(endpoint);
     setDrinksData(response.data);
   } catch (error) {
-    console.log(error);
+    const { status } = error.response;
+    console.error(`There is a ${status} error.`);
   }
 };
 

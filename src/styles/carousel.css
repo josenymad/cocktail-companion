@@ -4,6 +4,11 @@
   height: 24.5rem;
 }
 
+.carousel__error-message {
+  font-family: 'Kiwi Maru', serif;
+  padding: 0 1rem;
+}
+
 .carousel__right-arrow {
   position: absolute;
   bottom: 1rem;

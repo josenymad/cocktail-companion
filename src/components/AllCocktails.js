@@ -15,6 +15,8 @@ const AllCocktails = ({
   spirits,
   filteredDrinks,
   clearFilter,
+  alert,
+  setAlert,
 }) => {
   const [completeFilteredData, setCompleteFilteredData] = useState([]);
   const { drinks } = drinksData;
@@ -39,7 +41,10 @@ const AllCocktails = ({
         spirits={spirits}
         filterDrinks={filterDrinks}
         clearFilter={clearFilter}
+        message={alert}
         setDrinksData={setDrinksData}
+        alert={alert}
+        setAlert={setAlert}
       />
       <div className="all-cocktails__grid">
         {
@@ -66,10 +71,10 @@ const AllCocktails = ({
               );
             })
           ) : /* has the user entered a search query */ searchQuery ? (
-            <p className="no-cocktails">{`Sorry, there doesn't seem to be any cocktails called ${searchQuery}`}</p>
+            <p className="no-cocktails">{`Sorry, there don't seem to be any cocktails called ${searchQuery}`}</p>
           ) : (
             <p className="cocktails-loading">
-              Hang on, your cocktails are loading!
+              Sorry, we are not able to display your cocktails right now.
             </p>
           )
         }

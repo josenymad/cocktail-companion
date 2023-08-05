@@ -5,8 +5,12 @@ import "../styles/carousel.css";
 import CocktailCard from "./CocktailCard";
 import CocktailDetails from "./CocktailDetails";
 
-const Carousel = ({ selectedDrink, setSelectedDrink, slides }) => {
+const Carousel = ({ selectedDrink, searchQuery, setSelectedDrink, slides }) => {
   const [currentImage, setCurrentImage] = useState(0);
+
+  const handleSelectDrink = (selection) => {
+    setSelectedDrink(selection);
+  };
 
   let slideLength = 0;
 
@@ -23,12 +27,12 @@ const Carousel = ({ selectedDrink, setSelectedDrink, slides }) => {
   };
 
   if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
+    return (
+      <p className="carousel__error-message">
+        Sorry, there are no {searchQuery} cocktails to display.
+      </p>
+    );
   }
-
-  const handleSelectDrink = (selection) => {
-    setSelectedDrink(selection);
-  };
 
   return (
     <div className="carousel">

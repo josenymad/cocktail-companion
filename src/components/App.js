@@ -17,6 +17,7 @@ const App = () => {
   const [filteredDrinks, setFilteredDrinks] = useState([]);
   const spirits = ["Rum", "Vodka", "Gin", "Whiskey", "Tequila", "Brandy"];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [alert, setAlert] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -47,10 +48,11 @@ const App = () => {
   };
 
   const filterDrinks = (event) => {
-    filterCocktails(event.target.value, setFilteredDrinks);
+    filterCocktails(event.target.value, setFilteredDrinks, setAlert);
   };
 
   const clearFilter = () => {
+    setAlert("");
     setSearchQuery("");
     setFilteredDrinks([]);
     getCocktails(setDrinksData);
@@ -80,6 +82,7 @@ const App = () => {
           element={
             <Home
               drinksData={drinksData}
+              searchQuery={searchQuery}
               setSelectedDrink={setSelectedDrink}
               selectedDrink={selectedDrink}
             />
@@ -99,6 +102,8 @@ const App = () => {
               spirits={spirits}
               filteredDrinks={filteredDrinks}
               clearFilter={clearFilter}
+              alert={alert}
+              setAlert={setAlert}
             />
           }
         />

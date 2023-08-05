@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/home.css";
 import Carousel from "./Carousel";
 
-const Home = ({ drinksData, selectedDrink, setSelectedDrink }) => {
+const Home = ({ drinksData, searchQuery, selectedDrink, setSelectedDrink }) => {
   const { drinks } = drinksData;
 
   return (
@@ -11,6 +11,7 @@ const Home = ({ drinksData, selectedDrink, setSelectedDrink }) => {
         <div className="home__carousel">
           <Carousel
             selectedDrink={selectedDrink}
+            searchQuery={searchQuery}
             setSelectedDrink={setSelectedDrink}
             slides={drinks}
           />
