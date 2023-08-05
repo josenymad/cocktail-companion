@@ -20,6 +20,11 @@ const BurgerNav = ({ searchQuery, handleInputChange, handleSubmit }) => {
           <Link to="all-cocktails">ALL COCKTAILS</Link>
         </li>
         <li className="burger-navbar-list__item">
+          <Link to="https://linktr.ee/cocktail_companion" target="_blank">
+            CONTACT
+          </Link>
+        </li>
+        <li className="burger-navbar-list__item">
           <form className="navbar-list__search" onSubmit={handleSubmit}>
             <label htmlFor="search">{}</label>
             <input

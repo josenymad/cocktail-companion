@@ -17,6 +17,11 @@ const Navbar = ({ searchQuery, handleInputChange, handleSubmit }) => {
         <Link to="all-cocktails">All Cocktails</Link>
       </li>
       <li className="navbar-list__item">
+        <Link to="https://linktr.ee/cocktail_companion" target="_blank">
+          Contact
+        </Link>
+      </li>
+      <li className="navbar-list__item">
         <form className="navbar-list__search" onSubmit={handleSubmit}>
           <label htmlFor="search">{}</label>
           <input
