@@ -15,6 +15,8 @@ const AllCocktails = ({
   spirits,
   filteredDrinks,
   clearFilter,
+  alert,
+  setAlert,
 }) => {
   const [completeFilteredData, setCompleteFilteredData] = useState([]);
   const { drinks } = drinksData;
@@ -39,7 +41,10 @@ const AllCocktails = ({
         spirits={spirits}
         filterDrinks={filterDrinks}
         clearFilter={clearFilter}
+        message={alert}
         setDrinksData={setDrinksData}
+        alert={alert}
+        setAlert={setAlert}
       />
       <div className="all-cocktails__grid">
         {

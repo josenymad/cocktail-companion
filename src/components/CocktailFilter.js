@@ -3,25 +3,31 @@ import "../styles/cocktail-filter.css";
 import getRandomSelection from "../requests/getRandomSelection";
 import getRandomDrink from "../requests/getRandomDrink";
 import getMostPopular from "../requests/getMostPopular";
+import Alert from "./Alert";
 
 const CocktailFilter = ({
   spirits,
   filterDrinks,
   clearFilter,
   setDrinksData,
+  alert,
+  setAlert,
 }) => {
   const handleRandomSelection = () => {
     getRandomSelection(setDrinksData);
   };
+
   const handleRandomDrink = () => {
     getRandomDrink(setDrinksData);
   };
+
   const handleMostPopular = () => {
-    getMostPopular(setDrinksData);
+    getMostPopular(setDrinksData, setAlert);
   };
 
   return (
     <div className="cocktail-filter">
+      <Alert alert={alert} />
       <button
         type="button"
         className="cocktail-filter__clear-filter"

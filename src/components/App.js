@@ -17,6 +17,7 @@ const App = () => {
   const [filteredDrinks, setFilteredDrinks] = useState([]);
   const spirits = ["Rum", "Vodka", "Gin", "Whiskey", "Tequila", "Brandy"];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [alert, setAlert] = useState("");
 
   useEffect(() => {
     async function fetchData() {
@@ -51,6 +52,7 @@ const App = () => {
   };
 
   const clearFilter = () => {
+    setAlert("");
     setSearchQuery("");
     setFilteredDrinks([]);
     getCocktails(setDrinksData);
@@ -100,6 +102,8 @@ const App = () => {
               spirits={spirits}
               filteredDrinks={filteredDrinks}
               clearFilter={clearFilter}
+              alert={alert}
+              setAlert={setAlert}
             />
           }
         />
