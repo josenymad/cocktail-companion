@@ -30,16 +30,14 @@
 }
 
 .cocktail-details__button {
-    display: block;
-    margin: auto;
     border-style: none;
     background-color: transparent;
-    font-size: 30px;
+    font-size: 18px;
     transition: .3s;
 }
 
 .cocktail-details__button:hover {
-    transform: translateY(6px);
+    transform: translateY(-6px);
 } 
 
 @media screen and (max-width: 1400px) {

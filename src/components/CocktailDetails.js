@@ -21,6 +21,13 @@ const CocktailDetails = ({ selectedDrink, handleSelectDrink }) => {
 
   return (
     <div className="cocktail-details">
+      <button
+        type="button"
+        onClick={() => handleSelectDrink({})}
+        className="cocktail-details__button"
+      >
+        <FontAwesomeIcon icon={faCircleXmark} />
+      </button>
       <div className="cocktail-details__container">
         <img
           alt="cocktail"
@@ -49,14 +56,6 @@ const CocktailDetails = ({ selectedDrink, handleSelectDrink }) => {
           ) : null}
         </div>
       </div>
-
-      <button
-        type="button"
-        onClick={() => handleSelectDrink({})}
-        className="cocktail-details__button"
-      >
-        <FontAwesomeIcon icon={faCircleXmark} />
-      </button>
     </div>
   );
 };
