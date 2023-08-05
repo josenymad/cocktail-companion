@@ -17,22 +17,25 @@ const Home = ({ drinksData, searchQuery, selectedDrink, setSelectedDrink }) => {
           />
         </div>
         <p className="home__intro">
-          Welcome to Cocktail Companion! We have got you covered with an
-          extensive range of delicious drinks, top tips for building your home
-          bar and easy to follow instructions to get you mixing cocktails in no
-          time.
+          <strong>Welcome to Cocktail Companion!</strong> We have got you
+          covered with an extensive range of delicious drinks, top tips for
+          building your home bar and easy to follow instructions to get you
+          mixing cocktails in no time.
         </p>
         <p className="home__guide" id="guide-one">
-          Need inspiration? Scroll through our cocktail selection and click on
-          any drink for ingredients and instructions.
+          <strong>Need inspiration?</strong>
+          <br /> Scroll through our cocktail selection and click on any drink
+          for ingredients and instructions.
         </p>
         <p className="home__guide" id="guide-two">
-          Looking to perfect your set up? Head to Best Barware for ingredients
-          and equipment to suit a range of budgets.
+          <strong>Looking to perfect your set up?</strong>
+          <br /> Head to Best Barware for ingredients and equipment to suit a
+          range of budgets.
         </p>
         <p className="home__guide" id="guide-three">
-          After something specific? Check out All Cocktails to search by name,
-          filter by spirit or view our collections.
+          <strong>After something specific?</strong>
+          <br /> Check out All Cocktails to search by name, filter by spirit or
+          view our collections.
         </p>
       </div>
     </div>
