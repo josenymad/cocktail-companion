@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/all-cocktails.css";
 import CocktailCard from "./CocktailCard";
 import CocktailDetails from "./CocktailDetails";
@@ -71,10 +72,16 @@ const AllCocktails = ({
               );
             })
           ) : /* has the user entered a search query */ searchQuery ? (
-            <p className="no-cocktails">{`Sorry, there don't seem to be any cocktails called ${searchQuery}`}</p>
+            <p className="no-cocktails">{`Sorry, there seems to be no cocktails called ${searchQuery}`}</p>
           ) : (
             <p className="cocktails-loading">
-              Sorry, we are not able to display your cocktails right now.
+              Sorry for the delay! If the cocktails haven&apos;t loaded after a
+              while there may be something wrong with the server, please try
+              again later and{" "}
+              <Link to="https://linktr.ee/cocktail_companion" target="_blank">
+                <u>contact</u>
+              </Link>{" "}
+              us if the problem persists.
             </p>
           )
         }

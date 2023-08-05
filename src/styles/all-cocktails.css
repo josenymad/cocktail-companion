@@ -11,6 +11,10 @@
     font-family: 'Kiwi Maru', serif;
 }
 
+.cocktails-loading {
+    grid-column: 1 / span 3;
+}
+
 @media screen and (max-width: 1400px) {
     .all-cocktails__grid {
         grid-template-columns: 1fr 1fr;
