@@ -11,7 +11,7 @@ const getMostPopular = async (setDrinksData, setAlert) => {
   } catch (error) {
     const { status } = error.response;
     if (status === 404) {
-      setAlert("Sorry, something's gone wrong. Please try later.");
+      setAlert("Sorry, something went wrong. Please try later.");
     }
     if (status === 500) {
       setAlert("Sorry, there's a server error. Please try later.");

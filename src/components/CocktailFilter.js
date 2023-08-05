@@ -14,11 +14,11 @@ const CocktailFilter = ({
   setAlert,
 }) => {
   const handleRandomSelection = () => {
-    getRandomSelection(setDrinksData);
+    getRandomSelection(setDrinksData, setAlert);
   };
 
   const handleRandomDrink = () => {
-    getRandomDrink(setDrinksData);
+    getRandomDrink(setDrinksData, setAlert);
   };
 
   const handleMostPopular = () => {

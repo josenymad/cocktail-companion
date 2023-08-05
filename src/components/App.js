@@ -48,7 +48,7 @@ const App = () => {
   };
 
   const filterDrinks = (event) => {
-    filterCocktails(event.target.value, setFilteredDrinks);
+    filterCocktails(event.target.value, setFilteredDrinks, setAlert);
   };
 
   const clearFilter = () => {
