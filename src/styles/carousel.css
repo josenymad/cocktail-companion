@@ -6,6 +6,7 @@
 
 .carousel__error-message {
   font-family: 'Kiwi Maru', serif;
+  padding: 0 1rem;
 }
 
 .carousel__right-arrow {
