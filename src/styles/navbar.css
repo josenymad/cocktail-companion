@@ -28,6 +28,10 @@ a {
     font-weight: 500;
 }
 
+.navbar-list__searchBoxText {
+    width: 120px;
+}
+
 .navbar-list__searchBoxText, .navbar-list__button {
     padding: 0.6em;
     margin-right: 0.6em;
