@@ -35,6 +35,16 @@ exports[`NavBar renders correctly 1`] = `
     <li
       class="navbar-list__item"
     >
+      <a
+        href="https://linktr.ee/cocktail_companion"
+        target="_blank"
+      >
+        Contact
+      </a>
+    </li>
+    <li
+      class="navbar-list__item"
+    >
       <form
         class="navbar-list__search"
       >

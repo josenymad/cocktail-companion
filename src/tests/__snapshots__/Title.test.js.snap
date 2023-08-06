@@ -24,6 +24,11 @@ exports[`Title renders correctly 1`] = `
         </h2>
       </div>
     </div>
+    <img
+      alt="Logo"
+      class="logo"
+      src="IMG_2674.png"
+    />
   </div>
 </DocumentFragment>
 `;

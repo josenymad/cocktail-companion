@@ -6,100 +6,170 @@ exports[`App renders correctly 1`] = `
     class="app"
   >
     <div
-      class="navbar"
+      class="title"
     >
       <div
         class="navbar-titles"
+        id="outer-container"
       >
-        <h1
-          class="navbar-title__header"
+        <div
+          id="page-wrap"
         >
-          Cocktail Companion
-        </h1>
-        <h2
-          class="navbar-title__slogan"
-        >
-          The Ultimate Cocktail Guide
-        </h2>
+          <h1
+            class="navbar-title__header"
+          >
+            Cocktail Companion
+          </h1>
+          <h2
+            class="navbar-title__slogan"
+          >
+            The Ultimate Cocktail Guide
+          </h2>
+        </div>
       </div>
-      <ul
-        class="navbar-list"
-      >
-        <li
-          class="navbar-list__item"
-        >
-          <a
-            href="/"
-          >
-            Home
-          </a>
-        </li>
-        <li
-          class="navbar-list__item"
-        >
-          <a
-            href="/best-barware"
-          >
-            Best Barware
-          </a>
-        </li>
-        <li
-          class="navbar-list__item"
-        >
-          <a
-            href="/all-cocktails"
-          >
-            All Cocktails
-          </a>
-        </li>
-        <li
-          class="navbar-list__item"
-        >
-          <form>
-            <label
-              for="search"
-            />
-            <input
-              id="search"
-              type="search"
-              value=""
-            />
-            <label
-              for="search-button"
-            />
-            <button
-              class="navbar-list__button"
-              id="search-button"
-              type="submit"
-            >
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-magnifying-glass "
-                data-icon="magnifying-glass"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                  fill="currentColor"
-                />
-              </svg>
-            </button>
-          </form>
-        </li>
-      </ul>
+      <img
+        alt="Logo"
+        class="logo"
+        src="IMG_2674.png"
+      />
     </div>
+    <ul
+      class="navbar-list"
+    >
+      <li
+        class="navbar-list__item"
+      >
+        <a
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="navbar-list__item"
+      >
+        <a
+          href="/best-barware"
+        >
+          Best Barware
+        </a>
+      </li>
+      <li
+        class="navbar-list__item"
+      >
+        <a
+          href="/all-cocktails"
+        >
+          All Cocktails
+        </a>
+      </li>
+      <li
+        class="navbar-list__item"
+      >
+        <a
+          href="https://linktr.ee/cocktail_companion"
+          target="_blank"
+        >
+          Contact
+        </a>
+      </li>
+      <li
+        class="navbar-list__item"
+      >
+        <form
+          class="navbar-list__search"
+        >
+          <label
+            for="search"
+          />
+          <input
+            class="navbar-list__searchBoxText"
+            id="search"
+            placeholder="Margarita"
+            type="search"
+            value=""
+          />
+          <label
+            for="search-button"
+          />
+          <button
+            class="navbar-list__button"
+            id="search-button"
+            type="submit"
+          >
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-magnifying-glass "
+              data-icon="magnifying-glass"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </form>
+      </li>
+    </ul>
     <div
       class="home"
     >
-      <p
-        class="home__text"
+      <div
+        class="home__main"
       >
-        Welcome to Cocktail Companion! We have got you covered with an extensive range of delicious drinks, barware to suit all budgets and easy to follow instructions to get you mixing cocktails in no time. Search by ingredient, check out our favourites or let us surprise you with our random cocktail generator!
-      </p>
+        <div
+          class="home__carousel"
+        >
+          <p
+            class="carousel__error-message"
+          >
+            Sorry, there are no  cocktails to display.
+          </p>
+        </div>
+        <p
+          class="home__intro"
+        >
+          <strong>
+            Welcome to Cocktail Companion!
+          </strong>
+           We have got you covered with an extensive range of delicious drinks, top tips for building your home bar and easy to follow instructions to get you mixing cocktails in no time.
+        </p>
+        <p
+          class="home__guide"
+          id="guide-one"
+        >
+          <strong>
+            Need inspiration?
+          </strong>
+          <br />
+           Scroll through our cocktail selection and click on any drink for ingredients and instructions.
+        </p>
+        <p
+          class="home__guide"
+          id="guide-two"
+        >
+          <strong>
+            Looking to perfect your set up?
+          </strong>
+          <br />
+           Head to Best Barware for ingredients and equipment to suit a range of budgets.
+        </p>
+        <p
+          class="home__guide"
+          id="guide-three"
+        >
+          <strong>
+            After something specific?
+          </strong>
+          <br />
+           Check out All Cocktails to search by name, filter by spirit or view our collections.
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>
