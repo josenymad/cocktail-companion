@@ -2,7 +2,7 @@
 
 Your online guide for making cocktails, built collaboratively by Jose Wills, [Camilla Priest-Stephens](https://github.com/cprieststephens), and [Matt Mullins](https://github.com/mullinsmmm).
 
-The initial idea for this projects was conceptualised by [Max Tauroza](https://github.com/max-tau)  
+The initial idea for this project was conceptualised by [Max Tauroza](https://github.com/max-tau)  
 
 We designed the site using Figma, used Trello for planning and general project organisation, and Slack for communication.
  
