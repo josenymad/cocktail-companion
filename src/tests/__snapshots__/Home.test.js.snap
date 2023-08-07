@@ -6,57 +6,163 @@ exports[`Home renders correctly 1`] = `
     class="home"
   >
     <div
-      class="carousel"
+      class="home__main"
     >
       <div
-        class="slide active"
+        class="home__carousel"
       >
-        <div>
-          <img
-            alt="cocktail"
-            class="carousel__image"
-          />
-          <p
-            class="carousel__title"
-          />
+        <div
+          class="carousel"
+        >
+          <div
+            class="slide active"
+          >
+            <div
+              class="cocktail-card"
+            >
+              <button
+                class="cocktail-card__button"
+                type="button"
+              >
+                <img
+                  alt="thumbnail"
+                  class="cocktail-card__thumbnail"
+                />
+                <p
+                  class="cocktail-card__name"
+                />
+              </button>
+            </div>
+          </div>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-arrow-left carousel__left-arrow"
+            data-icon="arrow-left"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-arrow-right carousel__right-arrow"
+            data-icon="arrow-right"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+              fill="currentColor"
+            />
+          </svg>
+          <div
+            class="cocktail-details"
+          >
+            <button
+              class="cocktail-details__button"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="svg-inline--fa fa-circle-xmark "
+                data-icon="circle-xmark"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+            <div
+              class="cocktail-details__container"
+            >
+              <img
+                alt="cocktail"
+                class="cocktail-details__image"
+              />
+              <div
+                class="cocktail-details__text"
+              >
+                <h3
+                  class="cocktail-details__name"
+                />
+                <p
+                  class="cocktail-details__glass"
+                />
+                <p
+                  class="cocktail-details__ingredients"
+                >
+                  Ingredients:
+                </p>
+                <ul
+                  class="cocktail-details__ingredients-list"
+                />
+                <p
+                  class="cocktail-details__instruction"
+                >
+                  Instructions:
+                </p>
+                <p
+                  class="cocktail-details__instructions"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <svg
-        aria-hidden="true"
-        class="svg-inline--fa fa-arrow-left carousel__left-arrow"
-        data-icon="arrow-left"
-        data-prefix="fas"
-        focusable="false"
-        role="img"
-        viewBox="0 0 448 512"
-        xmlns="http://www.w3.org/2000/svg"
+      <p
+        class="home__intro"
       >
-        <path
-          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-          fill="currentColor"
-        />
-      </svg>
-      <svg
-        aria-hidden="true"
-        class="svg-inline--fa fa-arrow-right carousel__right-arrow"
-        data-icon="arrow-right"
-        data-prefix="fas"
-        focusable="false"
-        role="img"
-        viewBox="0 0 448 512"
-        xmlns="http://www.w3.org/2000/svg"
+        <strong>
+          Welcome to Cocktail Companion!
+        </strong>
+         We have got you covered with an extensive range of delicious drinks, top tips for building your home bar and easy to follow instructions to get you mixing cocktails in no time.
+      </p>
+      <p
+        class="home__guide"
+        id="guide-one"
       >
-        <path
-          d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
-          fill="currentColor"
-        />
-      </svg>
+        <strong>
+          Need inspiration?
+        </strong>
+        <br />
+         Scroll through our cocktail selection and click on any drink for ingredients and instructions.
+      </p>
+      <p
+        class="home__guide"
+        id="guide-two"
+      >
+        <strong>
+          Looking to perfect your set up?
+        </strong>
+        <br />
+         Head to Best Barware for ingredients and equipment to suit a range of budgets.
+      </p>
+      <p
+        class="home__guide"
+        id="guide-three"
+      >
+        <strong>
+          After something specific?
+        </strong>
+        <br />
+         Check out All Cocktails to search by name, filter by spirit or view our collections.
+      </p>
     </div>
-    <p
-      class="home__text"
-    >
-      Welcome to Cocktail Companion! We have got you covered with an extensive range of delicious drinks, barware to suit all budgets and easy to follow instructions to get you mixing cocktails in no time. Search by ingredient, check out our most popular drinks or let us surprise you with a random cocktail selection!
-    </p>
   </div>
 </DocumentFragment>
 `;

@@ -13,16 +13,33 @@ describe("Home", () => {
         },
       ],
     },
+    searchQuery: "mock-drink",
+    setSelectedDrink: jest.fn(),
+    selectedDrink: ["mock-property"],
   };
 
   it("renders correctly", () => {
-    const { asFragment } = render(<Home drinksData={validProps.drinksData} />);
+    const { asFragment } = render(
+      <Home
+        drinksData={validProps.drinksData}
+        searchQuery={validProps.searchQuery}
+        setSelectedDrink={validProps.setSelectedDrink}
+        selectedDrink={validProps.selectedDrink}
+      />,
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders the correct text", () => {
-    render(<Home drinksData={validProps.drinksData} />);
+    render(
+      <Home
+        drinksData={validProps.drinksData}
+        searchQuery={validProps.searchQuery}
+        setSelectedDrink={validProps.setSelectedDrink}
+        selectedDrink={validProps.selectedDrink}
+      />,
+    );
 
     expect(
       screen.getByText(/welcome to cocktail companion/i),
