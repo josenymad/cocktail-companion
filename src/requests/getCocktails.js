@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const getCocktails = async (setDrinksData, searchQuery) => {
-  let endpoint =
-    "https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=";
+  const { REACT_APP_API_KEY } = process.env;
+  let endpoint = `https://www.thecocktaildb.com/api/json/v2/${REACT_APP_API_KEY}/search.php?s=`;
 
   if (searchQuery) {
     endpoint += `${searchQuery}`;

@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const getRandomDrink = async (setDrinksData, setAlert) => {
-  const endpoint =
-    "https://www.thecocktaildb.com/api/json/v2/9973533/random.php";
+  const { REACT_APP_API_KEY } = process.env;
+  const endpoint = `https://www.thecocktaildb.com/api/json/v2/${REACT_APP_API_KEY}/random.php`;
 
   try {
     const response = await axios.get(endpoint);
