@@ -47,7 +47,6 @@ const Carousel = ({ selectedDrink, searchQuery, setSelectedDrink, slides }) => {
                 <CocktailCard
                   drink={slide}
                   handleSelectDrink={handleSelectDrink}
-                  data-testid="current__image"
                 />
               </div>
             )}
