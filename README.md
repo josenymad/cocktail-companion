@@ -10,6 +10,8 @@ We designed the site using Figma, used Trello for planning and general project o
  
 We managed our project using the scrum agile methodology to deliver the MVP before our deadline, and prioritised our tasks using the MosCoW method.
 
+Our tests were written using Jest and React Testing Library.
+
 The data is fetched from [the cocktail database API](https://www.thecocktaildb.com/api.php)
 
 ## Description
@@ -29,7 +31,7 @@ Also includes a page with a guide to buying barware depending on user budget
 
 ## Packages & Frameworks
 
-- React
+- React & Testing Library
 - Axios
 - Font Awesome
 - Jest
