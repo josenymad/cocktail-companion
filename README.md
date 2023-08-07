@@ -1,5 +1,7 @@
 # Cocktail Companion
 
+<img src="src/images/landing-page-screenshot.jpeg" alt="Screenshot of Cocktail Companion landing page on mobile, tablet and laptop" title="Cocktail Companion" width="600px"><br>
+
 Your online guide for making cocktails, built collaboratively by Jose Wills, [Camilla Priest-Stephens](https://github.com/cprieststephens), and [Matt Mullins](https://github.com/mullinsmmm).
 
 The initial idea for this project was conceptualised by [Max Tauroza](https://github.com/max-tau)  
