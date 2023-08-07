@@ -8,17 +8,24 @@ exports[`Carousel renders correctly 1`] = `
     <div
       class="slide active"
     >
-      <div>
-        <img
-          alt="cocktail"
-          class="carousel__image"
-          src="mock-url1"
-        />
-        <p
-          class="carousel__title"
+      <div
+        class="cocktail-card"
+      >
+        <button
+          class="cocktail-card__button"
+          type="button"
         >
-          mock-title1
-        </p>
+          <img
+            alt="thumbnail"
+            class="cocktail-card__thumbnail"
+            src="mock-url1"
+          />
+          <p
+            class="cocktail-card__name"
+          >
+            mock-title1
+          </p>
+        </button>
       </div>
     </div>
     <div
@@ -54,6 +61,64 @@ exports[`Carousel renders correctly 1`] = `
         fill="currentColor"
       />
     </svg>
+    <div
+      class="cocktail-details"
+    >
+      <button
+        class="cocktail-details__button"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="svg-inline--fa fa-circle-xmark "
+          data-icon="circle-xmark"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
+      <div
+        class="cocktail-details__container"
+      >
+        <img
+          alt="cocktail"
+          class="cocktail-details__image"
+        />
+        <div
+          class="cocktail-details__text"
+        >
+          <h3
+            class="cocktail-details__name"
+          />
+          <p
+            class="cocktail-details__glass"
+          />
+          <p
+            class="cocktail-details__ingredients"
+          >
+            Ingredients:
+          </p>
+          <ul
+            class="cocktail-details__ingredients-list"
+          />
+          <p
+            class="cocktail-details__instruction"
+          >
+            Instructions:
+          </p>
+          <p
+            class="cocktail-details__instructions"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;
