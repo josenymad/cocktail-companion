@@ -4,19 +4,23 @@ import Carousel from "../components/Carousel";
 
 describe("Carousel", () => {
   const validProps = {
-    selectedDrink: ["mock-property"],
+    selectedDrink: {
+      idDrink: "1",
+      strDrinkThumb: "mock-url1",
+      strDrink: "mock-title1",
+    },
     searchQuery: "mock-drink",
     setSelectedDrink: jest.fn(),
     drinks: [
       {
-        idDrink: "1",
-        strDrinkThumb: "mock-url1",
-        strDrink: "mock-title1",
-      },
-      {
         idDrink: "2",
         strDrinkThumb: "mock-url2",
         strDrink: "mock-title2",
+      },
+      {
+        idDrink: "3",
+        strDrinkThumb: "mock-url3",
+        strDrink: "mock-title3",
       },
     ],
   };
