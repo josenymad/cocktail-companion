@@ -15,7 +15,11 @@ describe("Home", () => {
     },
     searchQuery: "mock-drink",
     setSelectedDrink: jest.fn(),
-    selectedDrink: ["mock-property"],
+    selectedDrink: {
+      idDrink: "2",
+      strDrinkThumb: "mock-url2",
+      strDrink: "mock-title2",
+    },
   };
 
   it("renders correctly", () => {
