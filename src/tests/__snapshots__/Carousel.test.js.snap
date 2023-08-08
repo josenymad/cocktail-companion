@@ -18,12 +18,12 @@ exports[`Carousel renders correctly 1`] = `
           <img
             alt="thumbnail"
             class="cocktail-card__thumbnail"
-            src="mock-url1"
+            src="mock-url2"
           />
           <p
             class="cocktail-card__name"
           >
-            mock-title1
+            mock-title2
           </p>
         </button>
       </div>
@@ -90,13 +90,16 @@ exports[`Carousel renders correctly 1`] = `
         <img
           alt="cocktail"
           class="cocktail-details__image"
+          src="mock-url1"
         />
         <div
           class="cocktail-details__text"
         >
           <h3
             class="cocktail-details__name"
-          />
+          >
+            mock-title1
+          </h3>
           <p
             class="cocktail-details__glass"
           />
