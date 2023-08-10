@@ -97,6 +97,9 @@
     .cocktail-filter__clear-filter {
         width: 180px;
     }
+    .cocktail-filter__spirits-header::after {
+        content: " ⌵";
+    }
     .cocktail-filter__spirits {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr;
