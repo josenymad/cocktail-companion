@@ -93,13 +93,16 @@ exports[`Home renders correctly 1`] = `
               <img
                 alt="cocktail"
                 class="cocktail-details__image"
+                src="mock-url2"
               />
               <div
                 class="cocktail-details__text"
               >
                 <h3
                   class="cocktail-details__name"
-                />
+                >
+                  mock-title2
+                </h3>
                 <p
                   class="cocktail-details__glass"
                 />
