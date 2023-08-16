@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "../styles/carousel.css";
@@ -26,10 +27,23 @@ const Carousel = ({ selectedDrink, searchQuery, setSelectedDrink, slides }) => {
     setCurrentImage(currentImage === 0 ? slideLength - 1 : currentImage - 1);
   };
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
+  if ((!Array.isArray(slides) || slides.length <= 0) && searchQuery) {
     return (
       <p className="carousel__error-message">
-        Sorry, there are no {searchQuery} cocktails to display.
+        Sorry, there seems to be no cocktails named {searchQuery}
+      </p>
+    );
+  }
+
+  if ((!Array.isArray(slides) || slides.length <= 0) && !searchQuery) {
+    return (
+      <p className="carousel__error-message">
+        Sorry for the delay! If the cocktails haven&apos;t loaded after a while
+        there may be something wrong with the server, please try again later and{" "}
+        <Link to="https://linktr.ee/cocktail_companion" target="_blank">
+          <u>contact</u>
+        </Link>{" "}
+        us if the problem persists.
       </p>
     );
   }
