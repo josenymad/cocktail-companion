@@ -38,5 +38,5 @@ Also includes a page with a guide to buying barware depending on user budget
 
 ## How to use
 
-Head to [the cocktail companion](https://www.cocktailcompanion.bar/) and remember to drink responsibly!
+Head to [the cocktail companion](https://cocktail-companion.onrender.com/) and remember to drink responsibly!
  
